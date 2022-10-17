@@ -76,6 +76,9 @@
 
 ## Sequence Diagram
 
+@enduml
+```
+
 ![entities](./docs/Sequence Diagram1.svg)
 
 ## Launch notes
