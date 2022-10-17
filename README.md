@@ -76,10 +76,9 @@
 
 ## Sequence Diagram
 
-@enduml
-```
 
-![entities](./docs/Sequence Diagram1.svg)
+
+![entities](https://github.com/Devmize/M34081-Group3/blob/main/docs/Sequence%20Diagram1.svg)
 
 ## Launch notes
 * Create template repository with the name `GROUP-ID`-`YOUR-APP-NAME` and select this organization as an account
