@@ -92,11 +92,11 @@
    * Детали заказа/Order details - информация о заказе: время доставки, список товаров, сумма заказа
 
 
-## Agregates
+## Agregates and bounded contexts
 
 
 
-![entities](https://github.com/Devmize/M34081-Group3/blob/main/docs/Flowchart%2BDiagram%20(5).svg)
+![entities](https://github.com/Devmize/M34081-Group3/blob/main/docs/Drawing.vsdx.svg)
 
 ## Sequence Diagram
 
