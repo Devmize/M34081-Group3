@@ -18,7 +18,7 @@ class Product {
 
     constructor()
 
-    constructor(id: UUID? = null, name: String, price: Double, count: Int? = null, description: String? = null) {
+    constructor(id: UUID?, name: String?, price: Double?, count: Int?, description: String?) {
         this.id = id
         this.name = name
         this.price = price
