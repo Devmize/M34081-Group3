@@ -1,11 +1,9 @@
-package com.itmo.microservices.demo.product
+package com.itmo.microservices.demo.catalog
 
 import java.util.UUID
-import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
-@Entity
 class Product {
 
     @Id
