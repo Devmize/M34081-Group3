@@ -95,7 +95,7 @@
 
 
 
-![entities](https://github.com/Devmize/M34081-Group3/blob/main/docs/Drawing.vsdx.svg)
+![entities](https://github.com/Devmize/M34081-Group3/blob/ssevenseass/docs/Drawing.vsdx%20(1).svg)
 
 ## Sequence Diagram
 
