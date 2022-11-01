@@ -23,6 +23,7 @@
         <guava.version>30.1.1-jre</guava.version>
         <jjwt.version>0.9.1</jjwt.version>
         <common-lib.version>0.8.0-SNAPSHOT</common-lib.version>
+        <library.version>2.0.1-SNAPSHOT</library.version>
              
         <buildnumber-maven-plugin.version>1.4</buildnumber-maven-plugin.version>
         <jib-maven-plugin.version>2.8.0</jib-maven-plugin.version>
@@ -80,14 +81,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
+            <groupId>ru.quipy</groupId>
+            <artifactId>tiny-event-sourcing-lib</artifactId>
+            <version>${library.version}/version>
         </dependency>
 
         <dependency>
@@ -123,6 +119,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>ru.quipy</groupId>
+            <artifactId>tiny-event-sourcing-lib</artifactId>
+            <version>${library.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.quipy</groupId>
+            <artifactId>tiny-event-sourcing-lib</artifactId>
+            <version>${library.version}/version>
+        </dependency>
+
     </dependencies>
 
     <scm>
