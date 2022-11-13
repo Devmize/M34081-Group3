@@ -2,7 +2,8 @@ package com.itmo.microservices.demo.payment.config
 
 import com.itmo.microservices.demo.payment.api.PaymentAggregate
 import com.itmo.microservices.demo.payment.logic.Payment
-import com.itmo.microservices.demo.payment.projections.PaymentEventsSubscriber
+import com.itmo.microservices.demo.payment.logic.PaymentAggregateState
+import com.itmo.microservices.demo.payment.projections.AnnotationBasedPaymentEventsSubscriber
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
@@ -25,7 +26,7 @@ class PaymentConfig {
     private lateinit var subscriptionsManager: AggregateSubscriptionsManager
 
     @Autowired
-    private lateinit var paymentEventSubscriber: AnnotationBasedCatalogEventsSubscriber
+    private lateinit var paymentEventsSubscriber: AnnotationBasedPaymentEventsSubscriber
 
     @Autowired
     private lateinit var eventStreamManager: AggregateEventStreamManager
@@ -47,6 +48,6 @@ class PaymentConfig {
     }
 
     @Bean
-    fun paymentESService(): EventSourcingService<UUID, PaymentAggregate, Payment> =
+    fun paymentESService(): EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState> =
         eventSourcingServiceFactory.create()
 }
