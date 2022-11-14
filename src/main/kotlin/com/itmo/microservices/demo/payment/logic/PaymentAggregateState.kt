@@ -1,8 +1,6 @@
 package com.itmo.microservices.demo.payment.logic
 
-import com.itmo.microservices.demo.payment.api.PaymentAggregate
-import com.itmo.microservices.demo.payment.api.PaymentAttemptEvent
-import com.itmo.microservices.demo.payment.api.PaymentStatus
+import com.itmo.microservices.demo.payment.api.*
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
@@ -20,25 +18,8 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         return paymentId
     }
 
-    fun TryToPay(orderId: UUID, sum: BigDecimal): Event<PaymentAggregate> {
+    fun TryToPay(orderId: UUID, sum: BigDecimal): PaymentAttemptEvent {
         httpRequest("http://externalsystem/payment": orderId, sum)
-
-        if (httpResponse.status == "failure")
-            return PaymentAttemptEvent(
-                paymentId = paymentId,
-                orderId = orderId,
-                sum = sum,
-                status = PaymentStatus.Failure
-            )
-
-        if (httpResponse.status == "success")
-            return PaymentAttemptEvent(
-                paymentId = paymentId,
-                orderId = orderId,
-                sum = sum,
-                status = PaymentStatus.Success
-            )
-
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,
@@ -47,11 +28,11 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         )
     }
 
-    fun UpdateStatus(orderId: UUID, sum: BigDecimal): PaymentAttemptEvent {
+    fun UpdateStatus(orderId: UUID, sum: BigDecimal): Event<PaymentAggregate> {
         httpRequest("http://externalsystem/payment": orderId, sum)
 
         if (httpResponse.status == "failure")
-            return PaymentAttemptEvent(
+            return PaymentFailedEvent(
                 paymentId = paymentId,
                 orderId = orderId,
                 sum = sum,
@@ -59,7 +40,7 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
             )
 
         if (httpResponse.status == "success")
-            return PaymentAttemptEvent(
+            return PaymentCompletedSuccessfullyEvent(
                 paymentId = paymentId,
                 orderId = orderId,
                 sum = sum,
@@ -75,7 +56,19 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     }
 
     @StateTransitionFunc
-    fun updateInfoAboutPaymentStatus(event: PaymentAttemptEvent) {
+    fun paymentAttemptApply(event: PaymentAttemptEvent) {
+        status = event.status
+        updatedAt = createdAt
+    }
+
+    @StateTransitionFunc
+    fun paymentSuccessApply(event: PaymentCompletedSuccessfullyEvent) {
+        status = event.status
+        updatedAt = createdAt
+    }
+
+    @StateTransitionFunc
+    fun paymentFailedApply(event: PaymentFailedEvent) {
         status = event.status
         updatedAt = createdAt
     }

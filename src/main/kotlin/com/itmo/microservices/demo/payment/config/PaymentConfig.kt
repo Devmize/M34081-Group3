@@ -1,7 +1,6 @@
 package com.itmo.microservices.demo.payment.config
 
 import com.itmo.microservices.demo.payment.api.PaymentAggregate
-import com.itmo.microservices.demo.payment.logic.Payment
 import com.itmo.microservices.demo.payment.logic.PaymentAggregateState
 import com.itmo.microservices.demo.payment.projections.AnnotationBasedPaymentEventsSubscriber
 import org.slf4j.LoggerFactory
