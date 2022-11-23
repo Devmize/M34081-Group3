@@ -4,21 +4,21 @@ import com.itmo.microservices.demo.payment.api.*
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
-import java.math.BigDecimal
 import java.util.*
 
 class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     private lateinit var paymentId: UUID
-    var createdAt: Long = System.currentTimeMillis()
-    var updatedAt: Long = System.currentTimeMillis()
     private lateinit var orderId: UUID
-    private lateinit var sum: BigDecimal
+    private lateinit var sum: Amount
     private lateinit var status: PaymentStatus
+    private var createdAt: Long = System.currentTimeMillis()
+    private var updatedAt: Long = System.currentTimeMillis()
+
     override fun getId(): UUID {
         return paymentId
     }
 
-    fun TryToPay(orderId: UUID, sum: BigDecimal): PaymentAttemptEvent {
+    fun tryToPay(orderId: UUID, sum: Amount): PaymentAttemptEvent {
         httpRequest("http://externalsystem/payment": orderId, sum)
         return PaymentAttemptEvent(
             paymentId = paymentId,
@@ -28,7 +28,7 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         )
     }
 
-    fun UpdateStatus(orderId: UUID, sum: BigDecimal): Event<PaymentAggregate> {
+    fun updateStatus(orderId: UUID, sum: Amount): Event<PaymentAggregate> {
         httpRequest("http://externalsystem/payment": orderId, sum)
 
         if (httpResponse.status == "failure")
@@ -36,7 +36,7 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
                 paymentId = paymentId,
                 orderId = orderId,
                 sum = sum,
-                status = PaymentStatus.Failure
+                status = PaymentStatus.Failed
             )
 
         if (httpResponse.status == "success")
@@ -58,6 +58,8 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     @StateTransitionFunc
     fun paymentAttemptApply(event: PaymentAttemptEvent) {
         status = event.status
+        sum = event.sum
+        orderId = event.orderId
         updatedAt = createdAt
     }
 
