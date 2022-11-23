@@ -10,7 +10,7 @@ class DeliveryAggregateState: AggregateState<UUID, DeliveryAggregate> {
     private lateinit var DeliveryId: UUID
     private var TimeSlot: Timestamp = Timestamp(0,0,0,0,0);
     private var address: String? = ""
-    private var phoneNumber: BigDecimal? = BigDecimal.ZERO
+    private var phoneNumber: String? = ""
 
     override fun getId(): UUID {
         return this.DeliveryId

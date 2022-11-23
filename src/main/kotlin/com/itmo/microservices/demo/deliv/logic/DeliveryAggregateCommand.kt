@@ -7,26 +7,28 @@ import java.sql.Timestamp
 import java.util.UUID
 
 class DeliveryAggregateCommand {
-    private lateinit var DeliveryId: UUID
-    private var TimeSlot: Timestamp = Timestamp(0,0,0,0,0);
-    private var address: String? = ""
-    private var phoneNumber: BigDecimal? = BigDecimal.ZERO
-
-    override fun getId(): UUID {
-        return this.DeliveryId
-    }
 
     fun startToDeliver(Timestamp time, String address_, BigDecimal number) {
-        TimeSlot = time;
+        timeSlot = time;
         address = address_;
         phoneNumber = number;
     }
 
     fun endeedDelivery() {
         address = "";
-        TimeSlot = Timestamp(0,0,0,0);
+        timeSlot = Timestamp(0,0,0,0);
 
     }
+
+    private lateinit var deliveryId: UUID
+    private var timeSlot: Timestamp = Timestamp(0,0,0,0,0);
+    private var address: String? = ""
+    private var phoneNumber: String? = ""
+
+    override fun getId(): UUID {
+        return this.deliveryId
+    }
+
 
 
 }
