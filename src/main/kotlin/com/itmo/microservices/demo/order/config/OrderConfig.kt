@@ -2,6 +2,7 @@ package com.itmo.microservices.demo.order.config
 
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.logic.Order
+import com.itmo.microservices.demo.order.projection.AnnotationBasedOrderEventsSubscriber
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
