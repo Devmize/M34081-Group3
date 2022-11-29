@@ -20,22 +20,22 @@ class ProductPriceChangedEvent(
 
 @DomainEvent(name = ITEM_ADDED_TO_CATALOG_EVENT)
 class ItemAddedToCatalogEvent(
-        val productId: UUID,
-        val productName: String,
-        val price: Double,
-        val count: Int,
-        var description: String,
-        createdAt: Long = System.currentTimeMillis(),
+    val productId: UUID,
+    val productName: String,
+    val price: Double,
+    val count: Int,
+    var description: String,
+    createdAt: Long = System.currentTimeMillis(),
 ) : Event<CatalogAggregate>(
-        name = ITEM_ADDED_TO_CATALOG_EVENT,
-        createdAt = createdAt
+    name = ITEM_ADDED_TO_CATALOG_EVENT,
+    createdAt = createdAt
 )
 
 @DomainEvent(name = ITEM_REMOVED_FROM_CATALOG_EVENT)
 class ItemRemovedFromCatalogEvent(
-        val productId: UUID,
-        createdAt: Long = System.currentTimeMillis(),
+    val productId: UUID,
+    createdAt: Long = System.currentTimeMillis(),
 ) : Event<CatalogAggregate>(
-        name = ITEM_REMOVED_FROM_CATALOG_EVENT,
-        createdAt = createdAt
+    name = ITEM_REMOVED_FROM_CATALOG_EVENT,
+    createdAt = createdAt
 )
