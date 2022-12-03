@@ -3,6 +3,6 @@ package com.itmo.microservices.demo.deliv.api
 import ru.quipy.core.annotations.AggregateType
 import ru.quipy.domain.Aggregate
 
-(aggregateEventsTableName = "delivery-aggregate")
+@AggregateType(aggregateEventsTableName = "deliveries")
 class DeliveryAggregate: Aggregate {
 }
