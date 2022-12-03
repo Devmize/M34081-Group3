@@ -35,6 +35,11 @@
             <artifactId>common-lib</artifactId>
             <version>${common-lib.version}</version>
         </dependency>
+        <dependency>
+            <groupId>ru.quipy</groupId>
+            <artifactId>tiny-event-sourcing-spring-boot-starter</artifactId>
+            <version>${library.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>ru.quipy</groupId>
