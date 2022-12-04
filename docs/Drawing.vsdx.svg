@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:v='http://schemas.microsoft.com/visio/2003/SVGExtensions/' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' width='1381.8898pt' height='1303.937pt' viewBox='0 0 1381.8898 1303.937'>
+ <v:documentProperties>
+  <v:userDefs>
+   <v:ud v:nameU='msvNoAutoConnect' v:val='1'/>
+  </v:userDefs>
+ </v:documentProperties>
+ <g id='SFixTitle'/>
+ <g id='SContent'>
+  <g>
+   <g transform='matrix(1,0,0,-1,0,1303.937)'>
+    <g transform='matrix(1,0,0,1,336.61414,999.21265)' v:mID='1'>
+     <title>Shape1</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='1'>
+      <title>Shape1</title>
+      <path d='M12.755906105,255.118103027 L199.842529297,255.118103027 L199.842529297,255.118103027 C203.224304199,255.118103027 206.471038818,253.773254395 208.862319946,251.381988525 L208.862319946,251.381988525 C211.253601074,248.990707397 212.598419189,245.743988037 212.598419189,242.362213135 L212.598419189,242.362213135 L212.598419189,12.755906105 L212.598419189,12.755906105 C212.598419189,9.374126434 211.253601074,6.127397537 208.862319946,3.736118317 L208.862319946,3.736118317 C206.471038818,1.344839454 203.224304199,0 199.842529297,0 L199.842529297,0 L12.755906105,0 L12.755906105,0 C9.374126434,0 6.127397537,1.344839454 3.736118317,3.736118317 L3.736118317,3.736118317 C1.344839454,6.127397537 0,9.374126434 0,12.755906105 L0,12.755906105 L0,242.362213135 L0,242.362213135 C0.000001707,245.743988037 1.344842792,248.990722656 3.736123085,251.382003784 L3.736123085,251.382003784 C6.127402782,253.773284912 9.37413311,255.118103027 12.755912781,255.118103027 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M12.755906105,255.118103027 L199.842529297,255.118103027 L199.842529297,255.118103027 C203.224304199,255.118103027 206.471038818,253.773254395 208.862319946,251.381988525 L208.862319946,251.381988525 C211.253601074,248.990707397 212.598419189,245.743988037 212.598419189,242.362213135 L212.598419189,242.362213135 L212.598419189,12.755906105 L212.598419189,12.755906105 C212.598419189,9.374126434 211.253601074,6.127397537 208.862319946,3.736118317 L208.862319946,3.736118317 C206.471038818,1.344839454 203.224304199,0 199.842529297,0 L199.842529297,0 L12.755906105,0 L12.755906105,0 C9.374126434,0 6.127397537,1.344839454 3.736118317,3.736118317 L3.736118317,3.736118317 C1.344839454,6.127397537 0,9.374126434 0,12.755906105 L0,12.755906105 L0,242.362213135 L0,242.362213135 C0.000001707,245.743988037 1.344842792,248.990722656 3.736123085,251.382003784 L3.736123085,251.382003784 C6.127402782,253.773284912 9.37413311,255.118103027 12.755912781,255.118103027 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+    </g>
+    <g transform='matrix(1,0,0,1,400.39368,1215.3542)' v:mID='2'>
+     <title>Shape2</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='2'>
+      <title>Shape2</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='33.352985' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>User</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,405.70865,1130.3151)' v:mID='3'>
+     <title>Shape3</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='3'>
+      <title>Shape3</title>
+      <ellipse cx='37.20472440944882' cy='23.03149606299213' rx='37.2047233581543' ry='23.031496047973633' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='37.20472440944882' cy='23.03149606299213' rx='37.2047233581543' ry='23.031496047973633' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+    </g>
+    <g transform='matrix(1,0,0,1,400.39368,1139.1733)' v:mID='4'>
+     <title>Shape4</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='4'>
+      <title>Shape4</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='33.352985' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>User</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,60.236237,605.9055)' v:mID='5'>
+     <title>Shape5</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='5'>
+      <title>Shape5</title>
+      <path d='M51.02362442,340.157501221 L491.102355957,340.157501221 L491.102355957,340.157501221 C504.629486084,340.157501221 517.616394043,334.778137207 527.181518555,325.213012695 L527.181518555,325.213012695 C536.746582031,315.647918701 542.125976563,302.660980225 542.125976563,289.133850098 L542.125976563,289.133850098 L542.125976563,51.02362442 L542.125976563,51.02362442 C542.125976563,37.496505737 536.746582031,24.509590149 527.181518555,14.944473267 L527.181518555,14.944473267 C517.616394043,5.379357815 504.629486084,0 491.102355957,0 L491.102355957,0 L51.02362442,0 L51.02362442,0 C37.496505737,0 24.509590149,5.379357815 14.944473267,14.944473267 L14.944473267,14.944473267 C5.379357815,24.509590149 0,37.496505737 0,51.02362442 L0,51.02362442 L0,289.133850098 L0,289.133850098 C-0.000002275,302.660980225 5.379353046,315.647888184 14.944467545,325.212982178 L14.944467545,325.212982178 C24.50958252,334.778106689 37.496498108,340.157501221 51.023612976,340.157501221 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M51.02362442,340.157501221 L491.102355957,340.157501221 L491.102355957,340.157501221 C504.629486084,340.157501221 517.616394043,334.778137207 527.181518555,325.213012695 L527.181518555,325.213012695 C536.746582031,315.647918701 542.125976563,302.660980225 542.125976563,289.133850098 L542.125976563,289.133850098 L542.125976563,51.02362442 L542.125976563,51.02362442 C542.125976563,37.496505737 536.746582031,24.509590149 527.181518555,14.944473267 L527.181518555,14.944473267 C517.616394043,5.379357815 504.629486084,0 491.102355957,0 L491.102355957,0 L51.02362442,0 L51.02362442,0 C37.496505737,0 24.509590149,5.379357815 14.944473267,14.944473267 L14.944473267,14.944473267 C5.379357815,24.509590149 0,37.496505737 0,51.02362442 L0,51.02362442 L0,289.133850098 L0,289.133850098 C-0.000002275,302.660980225 5.379353046,315.647888184 14.944467545,325.212982178 L14.944467545,325.212982178 C24.50958252,334.778106689 37.496498108,340.157501221 51.023612976,340.157501221 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+    </g>
+    <g transform='matrix(1,0,0,1,267.51968,917.71655)' v:mID='6'>
+     <title>Shape6</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='6'>
+      <title>Shape6</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='21.690653' y='7.011496' class='TextStyle1' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,16.261654)'>Delivery</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,166.53543,850.39374)' v:mID='7'>
+     <title>Shape7</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='7'>
+      <title>Shape7</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='33.872562' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>Text</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,304.7244,836.2205)' v:mID='8'>
+     <title>Shape8</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='8'>
+      <title>Shape8</title>
+      <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='14.476966' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,29.403778)'>Delivery Service</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,166.53543,836.2205)' v:mID='9'>
+     <title>Shape9</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='9'>
+      <title>Shape9</title>
+      <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='33.352985' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,29.403778)'>User</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,49.606297,506.6929)' v:mID='10'>
+     <title>Shape10</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='10'>
+      <title>Shape10</title>
+      <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='14.305785' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,29.403778)'>External System</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,251.5748,765.3543)' v:mID='11'>
+     <title>Shape11</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='11'>
+      <title>Shape11</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='25.047777' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Delivered</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,368.50394,765.3543)' v:mID='12'>
+     <title>Shape12</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='12'>
+      <title>Shape12</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='17.12118' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Delivery failed</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,294.09448,807.874)' v:mID='13'>
+     <title>Dynamic connector.13</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='13'>
+      <title>Dynamic connector.13</title>
+      <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(-0.8320503,-0.55470014,0.55470014,-0.8320503,0,0)'/>
+      <path d='M37.358192444,30.373888016 L32.299697876,21.943065643 L32.299697876,21.943065643 C32.029788971,21.493217468 31.663314819,21.108875275 31.226812363,20.817874908 L31.226812363,20.817874908 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(-0.8320503,-0.55470014,0.55470014,-0.8320503,0,0)'/>
+     <path d='M37.358192444,30.373888016 L32.299697876,21.943065643 L32.299697876,21.943065643 C32.029788971,21.493217468 31.663314819,21.108875275 31.226812363,20.817874908 L31.226812363,20.817874908 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,359.74854,807.87396)' v:mID='14'>
+     <title>Dynamic connector.14</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='14'>
+      <title>Dynamic connector.14</title>
+      <path d='M17.168632507,-2.880000114 L22.928634644,0 L17.168632507,2.880000114 M17.168632507,-2.879999876 C18.320632935,-1.15200007 18.320632935,1.15200007 17.168632507,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.8000001,-0.5999999,0.5999999,0.8000001,4.585726,13.757178)'/>
+      <path d='M0,29.599966049 L8.380300522,11.44264698 L8.380300522,11.442648888 C8.626487732,10.90924263 9.001511574,10.445343018 9.471494675,10.092855453 L9.471494675,10.092853546 L22.928634644,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M17.168632507,-2.880000114 L22.928634644,0 L17.168632507,2.880000114 M17.168632507,-2.879999876 C18.320632935,-1.15200007 18.320632935,1.15200007 17.168632507,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.8000001,-0.5999999,0.5999999,0.8000001,4.585726,13.757178)'/>
+     <path d='M0,29.599966049 L8.380300522,11.44264698 L8.380300522,11.442648888 C8.626487732,10.90924263 9.001511574,10.445343018 9.471494675,10.092855453 L9.471494675,10.092853546 L22.928634644,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,134.64568,765.3543)' v:mID='15'>
+     <title>Shape15</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='15'>
+      <title>Shape15</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+    </g>
+    <g transform='matrix(1,0,0,1,134.64568,772.4409)' v:mID='16'>
+     <title>Shape16</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='16'>
+      <title>Shape16</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='19.763378' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>Slot selected</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,92.12598,807.874)' v:mID='17'>
+     <title>Shape17</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='17'>
+      <title>Shape17</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='5.634053' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>select slot of delivery</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,177.16536,807.874)' v:mID='18'>
+     <title>Dynamic connector.18</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='18'>
+      <title>Dynamic connector.18</title>
+      <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(-0.4902612,-0.8715756,0.8715756,-0.4902612,0,0)'/>
+      <path d='M16.960105896,30.151298523 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(-0.4902612,-0.8715756,0.8715756,-0.4902612,0,0)'/>
+     <path d='M16.960105896,30.151298523 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,198.4252,701.5748)' v:mID='19'>
+     <title>Shape19</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='19'>
+      <title>Shape19</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='1.759366' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Delivery time is expired</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,485.43307,701.5748)' v:mID='20'>
+     <title>Shape20</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='20'>
+      <title>Shape20</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='29.051355' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Refund</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,216.44443,744.0944)' v:mID='21'>
+     <title>Dynamic connector.21</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='21'>
+      <title>Dynamic connector.21</title>
+      <path d='M18.740465164,-2.880000114 L24.5004673,0 L18.740465164,2.880000114 M18.740465164,-2.879999876 C19.892465591,-1.15200007 19.892465591,1.15200007 18.740465164,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.25589252,-0.96670526,0.96670526,0.25589252,18.23098,23.68473)'/>
+      <path d='M0,92.557319641 L24.5004673,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M18.740465164,-2.880000114 L24.5004673,0 L18.740465164,2.880000114 M18.740465164,-2.879999876 C19.892465591,-1.15200007 19.892465591,1.15200007 18.740465164,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.25589252,-0.96670526,0.96670526,0.25589252,18.23098,23.68473)'/>
+     <path d='M0,92.557319641 L24.5004673,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,92.12598,648.4252)' v:mID='22'>
+     <title>Shape22</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='22'>
+      <title>Shape22</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='2.4561653' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Generate delivery slots</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,283.46454,722.126)' v:mID='23'>
+     <title>Dynamic connector.23</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='23'>
+      <title>Dynamic connector.23</title>
+      <path d='M196.208511353,-2.171338797 L201.968505859,0.708661437 L196.208511353,3.588661671 M196.208511353,-2.171338797 C197.36050415,-0.443338633 197.36050415,1.860661507 196.208511353,3.588661671 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(1,0,0,1,0,0)'/>
+      <path d='M0,0.708661437 L201.968505859,0.708661437 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M196.208511353,-2.171338797 L201.968505859,0.708661437 L196.208511353,3.588661671 M196.208511353,-2.171338797 C197.36050415,-0.443338633 197.36050415,1.860661507 196.208511353,3.588661671 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(1,0,0,1,0,0)'/>
+     <path d='M0,0.708661437 L201.968505859,0.708661437 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,453.5433,744.09454)' v:mID='24'>
+     <title>Dynamic connector.24</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='24'>
+      <title>Dynamic connector.24</title>
+      <path d='M68.649452209,-2.880000114 L74.409446716,0 L68.649452209,2.880000114 M68.649452209,-2.879999876 C69.801445007,-1.15200007 69.801445007,1.15200007 68.649452209,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.9397934,-0.34174305,0.34174305,0.9397934,4.4799423,25.428911)'/>
+      <path d='M0,27.057981491 L74.409446716,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M68.649452209,-2.880000114 L74.409446716,0 L68.649452209,2.880000114 M68.649452209,-2.879999876 C69.801445007,-1.15200007 69.801445007,1.15200007 68.649452209,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.9397934,-0.34174305,0.34174305,0.9397934,4.4799423,25.428911)'/>
+     <path d='M0,27.057981491 L74.409446716,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,219.68503,7.0866146)' v:mID='25'>
+     <title>Shape25</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='25'>
+      <title>Shape25</title>
+      <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='14.305785' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,29.403778)'>External System</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,92.125984,563.3858)' v:mID='26'>
+     <title>Dynamic connector.26</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='26'>
+      <title>Dynamic connector.26</title>
+      <path d='M28.255748749,82.159378052 L34.01574707,85.039375305 L28.255748749,87.919372559 M28.255748749,82.159362793 C29.407749176,83.887367249 29.407749176,86.191375732 28.255748749,87.919372559 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.37139064,0.9284767,-0.9284767,0.37139064,100.33969,21.873718)'/>
+      <path d='M0,0 L34.01574707,85.039375305 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M28.255748749,82.159378052 L34.01574707,85.039375305 L28.255748749,87.919372559 M28.255748749,82.159362793 C29.407749176,83.887367249 29.407749176,86.191375732 28.255748749,87.919372559 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.37139064,0.9284767,-0.9284767,0.37139064,100.33969,21.873718)'/>
+     <path d='M0,0 L34.01574707,85.039375305 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,676.7716,605.9055)' v:mID='27'>
+     <title>Shape27</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='27'>
+      <title>Shape27</title>
+      <path d='M51.02362442,340.157501221 L310.393707275,340.157501221 L310.393707275,340.157501221 C323.920837402,340.157501221 336.907745361,334.778137207 346.472839355,325.213012695 L346.472839355,325.213012695 C356.037963867,315.647918701 361.417327881,302.660980225 361.417327881,289.133850098 L361.417327881,289.133850098 L361.417327881,51.02362442 L361.417327881,51.02362442 C361.417327881,37.496505737 356.037963867,24.509590149 346.472839355,14.944473267 L346.472839355,14.944473267 C336.907745361,5.379357815 323.920837402,0 310.393707275,0 L310.393707275,0 L51.02362442,0 L51.02362442,0 C37.496505737,0 24.509590149,5.379357815 14.944473267,14.944473267 L14.944473267,14.944473267 C5.379357815,24.509590149 0,37.496505737 0,51.02362442 L0,51.02362442 L0,289.133850098 L0,289.133850098 C-0.000002275,302.660980225 5.379353046,315.647888184 14.944467545,325.212982178 L14.944467545,325.212982178 C24.50958252,334.778106689 37.496498108,340.157501221 51.023612976,340.157501221 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M51.02362442,340.157501221 L310.393707275,340.157501221 L310.393707275,340.157501221 C323.920837402,340.157501221 336.907745361,334.778137207 346.472839355,325.213012695 L346.472839355,325.213012695 C356.037963867,315.647918701 361.417327881,302.660980225 361.417327881,289.133850098 L361.417327881,289.133850098 L361.417327881,51.02362442 L361.417327881,51.02362442 C361.417327881,37.496505737 356.037963867,24.509590149 346.472839355,14.944473267 L346.472839355,14.944473267 C336.907745361,5.379357815 323.920837402,0 310.393707275,0 L310.393707275,0 L51.02362442,0 L51.02362442,0 C37.496505737,0 24.509590149,5.379357815 14.944473267,14.944473267 L14.944473267,14.944473267 C5.379357815,24.509590149 0,37.496505737 0,51.02362442 L0,51.02362442 L0,289.133850098 L0,289.133850098 C-0.000002275,302.660980225 5.379353046,315.647888184 14.944467545,325.212982178 L14.944467545,325.212982178 C24.50958252,334.778106689 37.496498108,340.157501221 51.023612976,340.157501221 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+    </g>
+    <g transform='matrix(1,0,0,1,825.5905,907.0866)' v:mID='28'>
+     <title>Shape28</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='28'>
+      <title>Shape28</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='21.27781' y='6.599055' class='TextStyle2' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,16.055433)'>Payment</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,910.6299,850.39374)' v:mID='29'>
+     <title>Shape29</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='29'>
+      <title>Shape29</title>
+      <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='33.352985' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,29.403778)'>User</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,740.55115,843.3071)' v:mID='30'>
+     <title>Shape30</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='30'>
+      <title>Shape30</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='26.233948' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Payment</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,825.5905,864.5669)' v:mID='31'>
+     <title>Dynamic connector.31</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='31'>
+      <title>Dynamic connector.31</title>
+      <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(-1,0,0,-1,0,0)'/>
+      <path d='M87.221343994,5.209291935 L64.159217834,0.084376544 L64.159217834,0.084376261 C63.906848907,0.028293891 63.649097443,-0.000000095 63.390571594,0 L63.390571594,0 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(-1,0,0,-1,0,0)'/>
+     <path d='M87.221343994,5.209291935 L64.159217834,0.084376544 L64.159217834,0.084376261 C63.906848907,0.028293891 63.649097443,-0.000000095 63.390571594,0 L63.390571594,0 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,825.5905,864.56696)' v:mID='32'>
+     <title>Shape32</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='32'>
+      <title>Shape32</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='24.985348' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>try to pay</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,740.55115,751.18115)' v:mID='33'>
+     <title>Shape33</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='33'>
+      <title>Shape33</title>
+      <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='13.310932' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,29.403778)'>Payment Service</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,783.07086,807.874)' v:mID='34'>
+     <title>Dynamic connector.34</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='34'>
+      <title>Dynamic connector.34</title>
+      <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(-0,-1,1,0,-0,0)'/>
+      <path d='M0,35.433071136 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(-0,-1,1,0,-0,0)'/>
+     <path d='M0,35.433071136 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,698.03143,669.68506)' v:mID='35'>
+     <title>Shape35</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='35'>
+      <title>Shape35</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='12.755106' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Payment success</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,814.9606,669.68506)' v:mID='36'>
+     <title>Shape36</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='36'>
+      <title>Shape36</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='15.955146' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Payment failed</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,750.7559,712.2048)' v:mID='37'>
+     <title>Dynamic connector.37</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='37'>
+      <title>Dynamic connector.37</title>
+      <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(-0.43582797,-0.90003,0.90003,-0.43582797,0,0)'/>
+      <path d='M19.510950089,40.292144775 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(-0.43582797,-0.90003,0.90003,-0.43582797,0,0)'/>
+     <path d='M19.510950089,40.292144775 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,783.07086,712.2047)' v:mID='38'>
+     <title>Dynamic connector.38</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='38'>
+      <title>Dynamic connector.38</title>
+      <path d='M42.387290955,-2.880000114 L48.147293091,0 L42.387290955,2.880000114 M42.387298584,-2.879999876 C43.539291382,-1.15200007 43.539291382,1.15200007 42.387298584,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.77724487,-0.6291982,0.6291982,0.77724487,10.725056,30.29419)'/>
+      <path d='M0,38.97637558 L48.147293091,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M42.387290955,-2.880000114 L48.147293091,0 L42.387290955,2.880000114 M42.387298584,-2.879999876 C43.539291382,-1.15200007 43.539291382,1.15200007 42.387298584,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.77724487,-0.6291982,0.6291982,0.77724487,10.725056,30.29419)'/>
+     <path d='M0,38.97637558 L48.147293091,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,931.8897,669.68506)' v:mID='39'>
+     <title>Shape39</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='39'>
+      <title>Shape39</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='29.051355' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Refund</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,549.88745,499.60632)' v:mID='40'>
+     <title>Dynamic connector.40</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='40'>
+      <title>Dynamic connector.40</title>
+      <path d='M394.746185303,167.198745728 L400.506164551,170.07875061 L394.746185303,172.958740234 M394.746185303,167.198745728 C395.898162842,168.926742554 395.898162842,171.230743408 394.746185303,172.958724976 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.7487622,0.6628387,-0.6628387,0.7487622,213.35706,-222.74077)'/>
+      <path d='M0,201.968505859 L206.023223877,2.284446239 L206.023223877,2.284448385 C206.697769165,1.630662441 207.605377197,1.271230459 208.544647217,1.285905719 L208.544647217,1.285905719 C209.390594482,1.29912281 210.204437256,1.614893675 210.837921143,2.175683975 L210.837921143,2.175686121 L400.506164551,170.07875061 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M394.746185303,167.198745728 L400.506164551,170.07875061 L394.746185303,172.958740234 M394.746185303,167.198745728 C395.898162842,168.926742554 395.898162842,171.230743408 394.746185303,172.958724976 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.7487622,0.6628387,-0.6628387,0.7487622,213.35706,-222.74077)'/>
+     <path d='M0,201.968505859 L206.023223877,2.284446239 L206.023223877,2.284448385 C206.697769165,1.630662441 207.605377197,1.271230459 208.544647217,1.285905719 L208.544647217,1.285905719 C209.390594482,1.29912281 210.204437256,1.614893675 210.837921143,2.175683975 L210.837921143,2.175686121 L400.506164551,170.07875061 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,262.20474,85.03937)' v:mID='41'>
+     <title>Shape41</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='41'>
+      <title>Shape41</title>
+      <path d='M46.240158081,308.267700195 L580.925170898,308.267700195 L580.925170898,308.267700195 C593.184143066,308.267700195 604.953491211,303.392669678 613.621948242,294.724273682 L613.621948242,294.724273682 C622.290344238,286.055908203 627.165344238,274.286529541 627.165344238,262.027557373 L627.165344238,262.027557373 L627.165344238,46.240158081 L627.165344238,46.240158081 C627.165344238,33.981208801 622.290344238,22.21181488 613.621948242,13.543429375 L613.621948242,13.543429375 C604.953491211,4.875042915 593.184143066,0 580.925170898,0 L580.925170898,0 L46.240158081,0 L46.240158081,0 C33.981208801,0 22.21181488,4.875042915 13.543429375,13.543429375 L13.543429375,13.543429375 C4.875042915,22.21181488 0,33.981208801 0,46.240158081 L0,46.240158081 L0,262.027557373 L0,262.027557373 C0.000002275,274.286529541 4.87504673,286.055908203 13.543434143,294.724273682 L13.543434143,294.724273682 C22.21182251,303.392669678 33.981220245,308.267700195 46.24016571,308.267700195 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M46.240158081,308.267700195 L580.925170898,308.267700195 L580.925170898,308.267700195 C593.184143066,308.267700195 604.953491211,303.392669678 613.621948242,294.724273682 L613.621948242,294.724273682 C622.290344238,286.055908203 627.165344238,274.286529541 627.165344238,262.027557373 L627.165344238,262.027557373 L627.165344238,46.240158081 L627.165344238,46.240158081 C627.165344238,33.981208801 622.290344238,22.21181488 613.621948242,13.543429375 L613.621948242,13.543429375 C604.953491211,4.875042915 593.184143066,0 580.925170898,0 L580.925170898,0 L46.240158081,0 L46.240158081,0 C33.981208801,0 22.21181488,4.875042915 13.543429375,13.543429375 L13.543429375,13.543429375 C4.875042915,22.21181488 0,33.981208801 0,46.240158081 L0,46.240158081 L0,262.027557373 L0,262.027557373 C0.000002275,274.286529541 4.87504673,286.055908203 13.543434143,294.724273682 L13.543434143,294.724273682 C22.21182251,303.392669678 33.981220245,308.267700195 46.24016571,308.267700195 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+    </g>
+    <g transform='matrix(1,0,0,1,522.63776,354.33072)' v:mID='42'>
+     <title>Shape42</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='42'>
+      <title>Shape42</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='28.001457' y='6.599055' class='TextStyle2' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,16.055433)'>Order</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,336.61417,297.6378)' v:mID='43'>
+     <title>Shape43</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='43'>
+      <title>Shape43</title>
+      <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <ellipse cx='42.51968503937008' cy='28.34645669291339' rx='42.51968765258789' ry='28.34645652770996' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='33.352985' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,29.403778)'>User</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,283.46457,217.91338)' v:mID='44'>
+     <title>Shape44</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='44'>
+      <title>Shape44</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='17.534023' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Order created</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,389.7638,217.91338)' v:mID='45'>
+     <title>Shape45</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='45'>
+      <title>Shape45</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='3.3563662' y='0' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Added products to the</text>
+      <text x='31.832512' y='9.898582' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>order</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,522.63776,217.91338)' v:mID='46'>
+     <title>Shape46</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='46'>
+      <title>Shape46</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='3.0301194' y='0' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Deleted products from</text>
+      <text x='25.299511' y='9.898582' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>the order</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,325.98422,260.43307)' v:mID='47'>
+     <title>Dynamic connector.47</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='47'>
+      <title>Dynamic connector.47</title>
+      <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(-0.628534,-0.7777821,0.7777821,-0.628534,0,0)'/>
+      <path d='M32.845890045,40.645290375 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(-0.628534,-0.7777821,0.7777821,-0.628534,0,0)'/>
+     <path d='M32.845890045,40.645290375 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,409.19983,260.43307)' v:mID='48'>
+     <title>Dynamic connector.48</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='48'>
+      <title>Dynamic connector.48</title>
+      <path d='M17.323648453,-2.880000114 L23.083648682,0 L17.323648453,2.880000114 M17.323648453,-2.879999876 C18.475646973,-1.15200007 18.475646973,1.15200007 17.323648453,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.4523805,-0.891825,0.891825,0.4523805,12.641056,20.586575)'/>
+      <path d='M0,45.507209778 L23.083648682,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M17.323648453,-2.880000114 L23.083648682,0 L17.323648453,2.880000114 M17.323648453,-2.879999876 C18.475646973,-1.15200007 18.475646973,1.15200007 17.323648453,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.4523805,-0.891825,0.891825,0.4523805,12.641056,20.586575)'/>
+     <path d='M0,45.507209778 L23.083648682,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,421.65356,260.43304)' v:mID='49'>
+     <title>Dynamic connector.49</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='49'>
+      <title>Dynamic connector.49</title>
+      <path d='M137.743927002,-2.880000114 L143.503936768,0 L137.743927002,2.880000114 M137.743927002,-2.879999876 C138.895935059,-1.15200007 138.895935059,1.15200007 137.743927002,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.9095957,-0.41549438,0.41549438,0.9095957,12.973373,59.62508)'/>
+      <path d='M0,65.551177979 L143.503936768,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M137.743927002,-2.880000114 L143.503936768,0 L137.743927002,2.880000114 M137.743927002,-2.879999876 C138.895935059,-1.15200007 138.895935059,1.15200007 137.743927002,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.9095957,-0.41549438,0.41549438,0.9095957,12.973373,59.62508)'/>
+     <path d='M0,65.551177979 L143.503936768,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,645.5905,217.91338)' v:mID='50'>
+     <title>Shape50</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='50'>
+      <title>Shape50</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='17.733395' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Order booked</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,421.65356,260.43304)' v:mID='51'>
+     <title>Dynamic connector.51</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='51'>
+      <title>Dynamic connector.51</title>
+      <path d='M260.696685791,-2.880000114 L266.456695557,0 L260.696685791,2.880000114 M260.696685791,-2.879999876 C261.848693848,-1.15200007 261.848693848,1.15200007 260.696685791,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.97104716,-0.23888792,0.23888792,0.97104716,7.714691,63.653286)'/>
+      <path d='M0,65.551177979 L266.456695557,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M260.696685791,-2.880000114 L266.456695557,0 L260.696685791,2.880000114 M260.696685791,-2.879999876 C261.848693848,-1.15200007 261.848693848,1.15200007 260.696685791,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.97104716,-0.23888792,0.23888792,0.97104716,7.714691,63.653286)'/>
+     <path d='M0,65.551177979 L266.456695557,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,506.6929,297.6378)' v:mID='52'>
+     <title>Shape52</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='52'>
+      <title>Shape52</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='15.9752865' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>book the order</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,336.61417,138.18898)' v:mID='53'>
+     <title>Shape53</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='53'>
+      <title>Shape53</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='14.549465' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Order cancelled</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,379.13385,180.70865)' v:mID='54'>
+     <title>Dynamic connector.54</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='54'>
+      <title>Dynamic connector.54</title>
+      <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(-0,-1,1,0,-0,0)'/>
+      <path d='M0,116.929130554 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M-5.760000229,-2.880000114 L0,0 L-5.760000229,2.880000114 M-5.759999752,-2.879999876 C-4.608000278,-1.15200007 -4.608000278,1.15200007 -5.759999752,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(-0,-1,1,0,-0,0)'/>
+     <path d='M0,116.929130554 L0,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,379.13388,180.70866)' v:mID='55'>
+     <title>Shape55</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='55'>
+      <title>Shape55</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='16.094105' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>cancel booking</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,522.63776,127.55905)' v:mID='56'>
+     <title>Shape56</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='56'>
+      <title>Shape56</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='10.545888' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Booking is expired</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,666.1417,127.55905)' v:mID='57'>
+     <title>Shape57</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='57'>
+      <title>Shape57</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='14.07419' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Order discarded</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,910.62994,127.55905)' v:mID='58'>
+     <title>Shape58</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='58'>
+      <title>Shape58</title>
+      <path d='M23.917322159,159.448822021 L422.539398193,159.448822021 L422.539398193,159.448822021 C428.880218506,159.448822021 434.96786499,156.927246094 439.451507568,152.443588257 L439.451507568,152.443588257 C443.935180664,147.95993042 446.456695557,141.872314453 446.456695557,135.531478882 L446.456695557,135.531494141 L446.456695557,23.917322159 L446.456695557,23.917322159 C446.456695557,17.576486588 443.935180664,11.488868713 439.451507568,7.005221367 L439.451507568,7.005221367 C434.96786499,2.521573544 428.880218506,0 422.539398193,0 L422.539398193,0 L23.917322159,0 L23.917322159,0 C17.576486588,0 11.488868713,2.521573544 7.005221367,7.005221367 L7.005221367,7.005221367 C2.521573544,11.488868713 0,17.576486588 0,23.917322159 L0,23.917322159 L0,135.531494141 L0,135.531494141 C0,141.872329712 2.521573544,147.959960938 7.005221367,152.443588257 L7.005221367,152.443588257 C11.488868713,156.927230835 17.576486588,159.448822021 23.917322159,159.448822021 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M23.917322159,159.448822021 L422.539398193,159.448822021 L422.539398193,159.448822021 C428.880218506,159.448822021 434.96786499,156.927246094 439.451507568,152.443588257 L439.451507568,152.443588257 C443.935180664,147.95993042 446.456695557,141.872314453 446.456695557,135.531478882 L446.456695557,135.531494141 L446.456695557,23.917322159 L446.456695557,23.917322159 C446.456695557,17.576486588 443.935180664,11.488868713 439.451507568,7.005221367 L439.451507568,7.005221367 C434.96786499,2.521573544 428.880218506,0 422.539398193,0 L422.539398193,0 L23.917322159,0 L23.917322159,0 C17.576486588,0 11.488868713,2.521573544 7.005221367,7.005221367 L7.005221367,7.005221367 C2.521573544,11.488868713 0,17.576486588 0,23.917322159 L0,23.917322159 L0,135.531494141 L0,135.531494141 C0,141.872329712 2.521573544,147.959960938 7.005221367,152.443588257 L7.005221367,152.443588257 C11.488868713,156.927230835 17.576486588,159.448822021 23.917322159,159.448822021 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+    </g>
+    <g transform='matrix(1,0,0,1,1091.3386,251.57481)' v:mID='59'>
+     <title>Shape59</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='59'>
+      <title>Shape59</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='24.309359' y='6.599055' class='TextStyle2' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,16.055433)'>Catalog</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,985.03937,191.33858)' v:mID='60'>
+     <title>Shape60</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='60'>
+      <title>Shape60</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='10.952689' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Product is missing</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,730.62994,212.59842)' v:mID='61'>
+     <title>Dynamic connector.61</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='61'>
+      <title>Dynamic connector.61</title>
+      <path d='M248.649459839,-2.880000114 L254.409454346,0 L248.649459839,2.880000114 M248.649459839,-2.879999876 C249.801467896,-1.15200007 249.801467896,1.15200007 248.649459839,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.9960189,-0.0891425,0.0891425,0.9960189,1.0128326,22.678696)'/>
+      <path d='M0,22.769342422 L254.409454346,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M248.649459839,-2.880000114 L254.409454346,0 L248.649459839,2.880000114 M248.649459839,-2.879999876 C249.801467896,-1.15200007 249.801467896,1.15200007 248.649459839,2.879999876 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.9960189,-0.0891425,0.0891425,0.9960189,1.0128326,22.678696)'/>
+     <path d='M0,22.769342422 L254.409454346,0 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,304.7244,35.43307)' v:mID='62'>
+     <title>Dynamic connector.62</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='62'>
+      <title>Dynamic connector.62</title>
+      <path d='M212.153396606,110.505828857 L217.913391113,113.385826111 L212.153396606,116.265823364 M212.153411865,110.505828857 C213.305389404,112.233825684 213.305389404,114.537826538 212.153411865,116.265823364 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.88709867,0.4615798,-0.4615798,0.88709867,76.939316,-87.78301)'/>
+      <path d='M0,0 L217.913391113,113.385826111 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M212.153396606,110.505828857 L217.913391113,113.385826111 L212.153396606,116.265823364 M212.153411865,110.505828857 C213.305389404,112.233825684 213.305389404,114.537826538 212.153411865,116.265823364 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.88709867,0.4615798,-0.4615798,0.88709867,76.939316,-87.78301)'/>
+     <path d='M0,0 L217.913391113,113.385826111 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,304.72443,35.43307)' v:mID='63'>
+     <title>Dynamic connector.63</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='63'>
+      <title>Dynamic connector.63</title>
+      <path d='M376.917175293,89.245986938 L382.677154541,92.125984192 L376.917175293,95.005981445 M376.917175293,89.245994568 C378.069152832,90.973983765 378.069152832,93.277984619 376.917175293,95.005981445 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.97222364,0.23405384,-0.23405384,0.97222364,32.191803,-87.00814)'/>
+      <path d='M0,0 L382.677154541,92.125984192 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M376.917175293,89.245986938 L382.677154541,92.125984192 L376.917175293,95.005981445 M376.917175293,89.245994568 C378.069152832,90.973983765 378.069152832,93.277984619 376.917175293,95.005981445 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.97222364,0.23405384,-0.23405384,0.97222364,32.191803,-87.00814)'/>
+     <path d='M0,0 L382.677154541,92.125984192 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,772.44086,127.55905)' v:mID='64'>
+     <title>Shape64</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='64'>
+      <title>Shape64</title>
+      <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M0,42.519687653 L85.039375305,42.519687653 L85.039375305,42.519687653 L85.039375305,0 L85.039375305,0 L0,0 L0,0 L0,42.519687653 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='#FFFFFF'  fill-rule='evenodd'/>
+     <g transform='matrix(1,0,0,1,1.4173241,1.417326)'>
+      <text x='12.769201' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,22.317163)'>Unfinished order</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,304.72437,35.43307)' v:mID='65'>
+     <title>Dynamic connector.65</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='65'>
+      <title>Dynamic connector.65</title>
+      <path d='M461.956512451,89.245986938 L467.716522217,92.125984192 L461.956512451,95.005981445 M461.956512451,89.245994568 C463.108520508,90.973983765 463.108520508,93.277984619 461.956512451,95.005981445 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' opacity='0' transform='matrix(0.98114824,0.19325648,-0.19325648,0.98114824,26.621246,-88.65252)'/>
+      <path d='M0,0 L467.716522217,92.125984192 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none' stroke-opacity='0'/>
+     </g>
+     <path d='M461.956512451,89.245986938 L467.716522217,92.125984192 L461.956512451,95.005981445 M461.956512451,89.245994568 C463.108520508,90.973983765 463.108520508,93.277984619 461.956512451,95.005981445 ' stroke='#000000' stroke-width='1.4173229' fill='#000000'  fill-rule='evenodd' transform='matrix(0.98114824,0.19325648,-0.19325648,0.98114824,26.621246,-88.65252)'/>
+     <path d='M0,0 L467.716522217,92.125984192 ' stroke='#000000' stroke-width='1.4173229' stroke-linecap='round' fill='none'/>
+    </g>
+    <g transform='matrix(1,0,0,1,549.2126,403.937)' v:mID='66'>
+     <title>Shape66</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='66'>
+      <title>Shape66</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='11.88914' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>Bounded Context</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,262.20474,946.06305)' v:mID='67'>
+     <title>Shape67</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='67'>
+      <title>Shape67</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='11.88914' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>Bounded Context</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,825.5905,946.06305)' v:mID='68'>
+     <title>Shape68</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='68'>
+      <title>Shape68</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='11.88914' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>Bounded Context</text>
+     </g>
+    </g>
+    <g transform='matrix(1,0,0,1,453.5433,1254.3307)' v:mID='69'>
+     <title>Shape69</title>
+     <g transform='matrix(1,0,0,1,0,0)' v:mID='69'>
+      <title>Shape69</title>
+     </g>
+     <g transform='matrix(1,0,0,1,1.4173241,1.4173222)'>
+      <text x='11.88914' y='4.949291' class='TextStyle0' fill='#000000' opacity='1' transform='matrix(1,0,0,-1,0,15.230552)'>Bounded Context</text>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <style type='text/css'><![CDATA[ .TextStyle0 {font-family:Calibri;font-size:8.248819px;}.TextStyle2 {font-family:Calibri;font-size:10.998425px;}.TextStyle1 {font-family:Calibri;font-size:11.685827px;} ]]></style>
+</svg>
