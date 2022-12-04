@@ -1,7 +1,6 @@
 package com.itmo.microservices.demo.payment.logic
 
 import com.itmo.microservices.demo.payment.api.*
-import com.itmo.microservices.demo.payment.dto.Amount
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
@@ -10,7 +9,7 @@ import java.util.*
 class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     private lateinit var paymentId: UUID
     private lateinit var orderId: UUID
-    private lateinit var sum: Amount
+    private lateinit var sum: Int
     private lateinit var status: PaymentStatus
     private var createdAt: Long = System.currentTimeMillis()
     private var updatedAt: Long = System.currentTimeMillis()
@@ -19,7 +18,7 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         return paymentId
     }
 
-    fun tryToPay(orderId: UUID, sum: Amount): PaymentAttemptEvent {
+    fun tryToPay(orderId: UUID, sum: Int): PaymentAttemptEvent {
         httpRequest("http://externalsystem/payment": orderId, sum)
         return PaymentAttemptEvent(
             paymentId = paymentId,
@@ -29,7 +28,7 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         )
     }
 
-    fun updateStatus(orderId: UUID, sum: Amount): Event<PaymentAggregate> {
+    fun updateStatus(orderId: UUID, sum: Int): Event<PaymentAggregate> {
         httpRequest("http://externalsystem/payment": orderId, sum)
 
         if (httpResponse.status == "failure")
