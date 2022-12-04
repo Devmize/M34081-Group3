@@ -1,7 +1,7 @@
 package com.itmo.microservices.demo.payment.logic
 
 import com.itmo.microservices.demo.payment.api.*
-import com.itmo.microservices.demo.payment.model.Amount
+import com.itmo.microservices.demo.payment.dto.Amount
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event

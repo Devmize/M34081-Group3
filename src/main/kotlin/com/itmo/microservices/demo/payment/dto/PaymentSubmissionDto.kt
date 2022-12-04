@@ -1,4 +1,4 @@
-package com.itmo.microservices.demo.payment.model
+package com.itmo.microservices.demo.payment.dto
 
 import java.util.*
 
