@@ -1,6 +1,6 @@
 package com.itmo.microservices.demo.deliv.projections
 
-import com.itmo.microservices.demo.delivery.api.UserAggregate
+import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import ru.quipy.streams.AggregateSubscriptionsManager

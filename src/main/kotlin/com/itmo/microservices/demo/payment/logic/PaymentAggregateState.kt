@@ -6,11 +6,12 @@ import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
 import java.util.*
+import kotlin.properties.Delegates
 
 class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     private lateinit var paymentId: UUID
     private lateinit var orderId: UUID
-    private lateinit var sum: Amount
+    private var sum by Delegates.notNull<Int>()
     private lateinit var status: PaymentStatus
     private var createdAt: Long = System.currentTimeMillis()
     private var updatedAt: Long = System.currentTimeMillis()
@@ -19,42 +20,44 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         return paymentId
     }
 
-    fun tryToPay(orderId: UUID, sum: Amount): PaymentAttemptEvent {
-        httpRequest("http://externalsystem/payment": orderId, sum)
-        return PaymentAttemptEvent(
-            paymentId = paymentId,
-            orderId = orderId,
-            sum = sum,
-            status = PaymentStatus.Pending
-        )
-    }
+    // чените сами это какая то чушь написана
 
-    fun updateStatus(orderId: UUID, sum: Amount): Event<PaymentAggregate> {
-        httpRequest("http://externalsystem/payment": orderId, sum)
-
-        if (httpResponse.status == "failure")
-            return PaymentFailedEvent(
-                paymentId = paymentId,
-                orderId = orderId,
-                sum = sum,
-                status = PaymentStatus.Failed
-            )
-
-        if (httpResponse.status == "success")
-            return PaymentCompletedSuccessfullyEvent(
-                paymentId = paymentId,
-                orderId = orderId,
-                sum = sum,
-                status = PaymentStatus.Success
-            )
-
-        return PaymentAttemptEvent(
-            paymentId = paymentId,
-            orderId = orderId,
-            sum = sum,
-            status = PaymentStatus.Pending
-        )
-    }
+//    fun tryToPay(orderId: UUID, sum: Amount): PaymentAttemptEvent {
+//        httpRequest("http://externalsystem/payment": orderId, sum)
+//        return PaymentAttemptEvent(
+//            paymentId = paymentId,
+//            orderId = orderId,
+//            sum = sum,
+//            status = PaymentStatus.Pending
+//        )
+//    }
+//
+//    fun updateStatus(orderId: UUID, sum: Amount): Event<PaymentAggregate> {
+//        httpRequest("http://externalsystem/payment": orderId, sum)
+//
+//        if (httpResponse.status == "failure")
+//            return PaymentFailedEvent(
+//                paymentId = paymentId,
+//                orderId = orderId,
+//                sum = sum,
+//                status = PaymentStatus.Failed
+//            )
+//
+//        if (httpResponse.status == "success")
+//            return PaymentCompletedSuccessfullyEvent(
+//                paymentId = paymentId,
+//                orderId = orderId,
+//                sum = sum,
+//                status = PaymentStatus.Success
+//            )
+//
+//        return PaymentAttemptEvent(
+//            paymentId = paymentId,
+//            orderId = orderId,
+//            sum = sum,
+//            status = PaymentStatus.Pending
+//        )
+//    }
 
     @StateTransitionFunc
     fun paymentAttemptApply(event: PaymentAttemptEvent) {

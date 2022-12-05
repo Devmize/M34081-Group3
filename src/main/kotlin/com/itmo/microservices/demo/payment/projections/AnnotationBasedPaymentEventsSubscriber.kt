@@ -4,8 +4,9 @@ import com.itmo.microservices.demo.payment.api.PaymentAggregate
 import com.itmo.microservices.demo.payment.api.PaymentAttemptEvent
 import com.itmo.microservices.demo.payment.api.PaymentCompletedSuccessfullyEvent
 import com.itmo.microservices.demo.payment.api.PaymentFailedEvent
-import com.sun.org.slf4j.internal.Logger
-import com.sun.org.slf4j.internal.LoggerFactory
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+
 import org.springframework.stereotype.Service
 import ru.quipy.streams.annotation.AggregateSubscriber
 import ru.quipy.streams.annotation.SubscribeEvent

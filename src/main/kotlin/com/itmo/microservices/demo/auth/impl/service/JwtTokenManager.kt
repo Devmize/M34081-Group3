@@ -54,7 +54,7 @@ class JwtTokenManager(private val properties: SecurityProperties) {
     fun getRolesFromToken(token: String): List<String> {
         return getClaimFromToken(token) { claims ->
             ((claims.get("roles", List::class.java) ?: emptyList<String>()) as List<*>)
-                    .filterIsInstance(String::class.java)
+                .filterIsInstance(String::class.java)
         }
     }
 
@@ -75,8 +75,10 @@ class JwtTokenManager(private val properties: SecurityProperties) {
      * @return Generated token
      */
     fun generateToken(userDetails: UserDetails): String {
-        return doGenerateToken(userDetails, TokenType.ACCESS,
-                properties.tokenLifetime)
+        return doGenerateToken(
+            userDetails, TokenType.ACCESS,
+            properties.tokenLifetime
+        )
     }
 
     /**
@@ -85,27 +87,31 @@ class JwtTokenManager(private val properties: SecurityProperties) {
      * @return Generated token
      */
     fun generateRefreshToken(userDetails: UserDetails): String {
-        return doGenerateToken(userDetails, TokenType.REFRESH,
-                properties.refreshTokenLifetime)
+        return doGenerateToken(
+            userDetails, TokenType.REFRESH,
+            properties.refreshTokenLifetime
+        )
     }
 
     //for retrieving any information from token we will need the secret key
     private fun getAllClaimsFromToken(token: String): Claims = Jwts.parser()
-            .setSigningKey(properties.secret)
-            .parseClaimsJws(token)
-            .body
+        .setSigningKey(properties.secret)
+        .parseClaimsJws(token)
+        .body
 
-    private fun doGenerateToken(userDetails: UserDetails,
-                                type: TokenType,
-                                tokenTTL: Duration): String =
-            Jwts.builder()
-                    .claim("type", type.name.lowercase(Locale.getDefault()))
-                    .setSubject(userDetails.username)
-                    .setIssuedAt(Date())
-                    .setExpiration(Date.from(Instant.now().plus(tokenTTL)))
-                    .claim("roles", userDetails.authorities.map { it.authority })
-                    .signWith(SignatureAlgorithm.HS512, properties.secret)
-                    .compact()
+    private fun doGenerateToken(
+        userDetails: UserDetails,
+        type: TokenType,
+        tokenTTL: Duration
+    ): String =
+        Jwts.builder()
+            .claim("type", type.name.lowercase(Locale.getDefault()))
+            .setSubject(userDetails.username)
+            .setIssuedAt(Date())
+            .setExpiration(Date.from(Instant.now().plus(tokenTTL)))
+            .claim("roles", userDetails.authorities.map { it.authority })
+            .signWith(SignatureAlgorithm.HS512, properties.secret)
+            .compact()
 
     private enum class TokenType {
         ACCESS, REFRESH

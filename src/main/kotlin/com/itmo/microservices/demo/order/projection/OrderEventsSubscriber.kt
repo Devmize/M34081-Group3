@@ -22,7 +22,7 @@ class OrderEventsSubscriber {
         subscriptionsManager.createSubscriber(OrderAggregate::class, "some-meaningful-name") {
 
             `when`(OrderCreatedEvent::class) { event ->
-                logger.info("order created successfully: orderId {}, orderItems {}, price {}, date {}", event.orderId, event.orderItems, event.price, event.date)
+                logger.info("order created successfully: orderId {}, items {}, date {}", event.id, event.itemsMap,  event.timeCreated)
             }
         }
     }
