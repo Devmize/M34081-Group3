@@ -23,9 +23,12 @@
         <guava.version>30.1.1-jre</guava.version>
         <jjwt.version>0.9.1</jjwt.version>
         <common-lib.version>0.8.0-SNAPSHOT</common-lib.version>
+        <library.version>2.0.1-SNAPSHOT</library.version>
              
         <buildnumber-maven-plugin.version>1.4</buildnumber-maven-plugin.version>
         <jib-maven-plugin.version>2.8.0</jib-maven-plugin.version>
+        <library.version>2.0.1-SNAPSHOT</library.version>
+
     </properties>
          
     <dependencies>
@@ -33,6 +36,23 @@
             <groupId>com.itmo.microservices</groupId>
             <artifactId>common-lib</artifactId>
             <version>${common-lib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.quipy</groupId>
+            <artifactId>tiny-event-sourcing-spring-boot-starter</artifactId>
+            <version>${library.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.quipy</groupId>
+            <artifactId>tiny-event-sourcing-spring-boot-starter</artifactId>
+            <version>${library.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.quipy</groupId>
+            <artifactId>tiny-event-sourcing-lib</artifactId>
+            <version>${library.version}</version>
         </dependency>
 
         <dependency>
