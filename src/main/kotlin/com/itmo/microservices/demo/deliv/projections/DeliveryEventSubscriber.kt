@@ -18,19 +18,19 @@ class DeliveryEventSubscriber {
     fun init() {
         subscriptionsManager.createSubscriber(DeliveryAggregate::class, "name") {
 
-            `when`(DeliveryAttemptEvent::class) { event ->
+            `when`(DeliveryAttemptEvent::class) { event  ->
                 logger.info(
                     "attempt to delivery the order: time {}, phone {}, idnum {}",
                     event.time, event.phoneNum, event.idnum
                 )
             }
-            `when`(DeliveryCompletedSuccessfullyEvent::class) { event ->
+            `when`(DeliveryCompletedSuccessfullyEvent::class) { event  ->
                 logger.info(
                     "dalivery completed successfully: time {}, idnum {}",
                     event.time, event.idnum
                 )
             }
-            `when`(DeliveryFailedEvent::class) { event ->
+            `when`(DeliveryFailedEvent::class) { event  ->
                 logger.info(
                     "delivery failed: time {}, idnum {}",
                     event.time, event.idnum
