@@ -1,4 +1,4 @@
-package com.itmo.microservices.demo.catalog.projections
+/*package com.itmo.microservices.demo.catalog.projections
 
 import com.itmo.microservices.demo.catalog.api.CatalogAggregate
 import com.itmo.microservices.demo.catalog.api.ItemAddedToCatalogEvent
@@ -36,4 +36,4 @@ class CatalogEventsSubscriber {
             }
         }
     }
-}
+}*/

@@ -1,4 +1,4 @@
-package com.itmo.microservices.demo.deliv.config
+/*package com.itmo.microservices.demo.deliv.config
 
 import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
 import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
@@ -46,4 +46,4 @@ class DeliveryConfig {
 
     @Bean
     fun userESService() = eventSourcingServiceFactory.create<UUID, DeliveryAggregate, DeliveryAggregateState>()
-}
+}*/

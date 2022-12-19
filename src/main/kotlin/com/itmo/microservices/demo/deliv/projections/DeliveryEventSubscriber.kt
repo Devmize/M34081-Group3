@@ -1,4 +1,4 @@
-package com.itmo.microservices.demo.deliv.projections
+/*package com.itmo.microservices.demo.deliv.projections
 
 import com.itmo.microservices.demo.delivery.api.UserAggregate
 import org.slf4j.LoggerFactory
@@ -20,3 +20,5 @@ class DeliveryEventSubscriber {
     lateinit var subscriptionsManager: AggregateSubscriptionsManager
 
 }
+
+ */

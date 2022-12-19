@@ -1,4 +1,4 @@
-package com.itmo.microservices.demo.order.projection
+/*package com.itmo.microservices.demo.order.projection
 
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.OrderCreatedEvent
@@ -21,3 +21,5 @@ class AnnotationBasedOrderEventsSubscriber {
         logger.info("order created successfully: orderId {}, orderItems {}, price {}, date {}", event.orderId, event.orderItems, event.price, event.date)
     }
 }
+
+ */

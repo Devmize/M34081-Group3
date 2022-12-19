@@ -1,4 +1,4 @@
-package com.itmo.microservices.demo.deliv.logic
+/*package com.itmo.microservices.demo.deliv.logic
 
 import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
 import ru.quipy.domain.AggregateState
@@ -19,3 +19,4 @@ class DeliveryAggregateCommand {
 
 
 }
+ */
