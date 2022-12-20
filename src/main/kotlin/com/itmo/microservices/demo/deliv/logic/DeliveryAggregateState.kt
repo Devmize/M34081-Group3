@@ -1,75 +1,89 @@
-package com.itmo.microservices.demo.deliv.logic
+
+package com.itmo.microservices.deliv.payment.logic
 
 import com.itmo.microservices.demo.deliv.api.*
-import com.itmo.microservices.demo.delivery.entity.Delivery
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
+import java.sql.Timestamp
 import java.util.*
-import  java.security.*
+import kotlin.properties.Delegates
 
-class DeliveryAggregateState: AggregateState<UUID, DeliveryAggregate> {
-    private lateinit var DeliveryId: UUID
-    private var timeSlot: Timestamp = Timestamp(0,0,0,0,0);
-    private var address: String? = ""
-    private var phoneNumber: String? = ""
+class DeliveryAggregateState : AggregateState<UUID, DeliveryAggregate> {
+    private lateinit var deliveryId: UUID
+    private lateinit var timestamp: Timestamp
     private lateinit var status: DeliveryStatus
+    private lateinit var address: String
+    private lateinit var phoneNumber: String
+    private var createdAt: Long = System.currentTimeMillis()
+    private var updatedAt: Long = System.currentTimeMillis()
 
     override fun getId(): UUID {
-        return this.DeliveryId
+        return deliveryId
     }
 
-    fun tryToDeliver(orderId: UUID, time: Timestamp): DeliveryAttemptEvent {
-        httpRequest("http://externalsystem/delivery": orderId, time)
+    fun tryToPay(orderId: UUID, sum: Int, timestamp: Timestamp): DeliveryAttemptEvent {
+        /*
+        httpRequest("http://externalsystem/delivery": orderId, sum)
+        */
         return DeliveryAttemptEvent(
-            DeliveryId = orderId,
-            timeSlot = time
+            deliveryId = orderId,
+            timestamp = timestamp,
+            status = DeliveryStatus.Pending,
+            address = "",
+            phoneNumber = ""
         )
     }
 
-    fun updateStatus(orderId: UUID, time: Timestamp): Event<DeliveryAggregate> {
-        httpRequest("http://externalsystem/delivery": orderId, time)
+    fun updateStatus(orderId: UUID, sum: Int, timestamp: Timestamp): Event<DeliveryAggregate> {
+        /*
+        httpRequest("http://externalsystem/delivery": orderId, sum)
 
         if (httpResponse.status == "failure")
-            return DeliveryFailedEvent(
-                DeliveryId = DeliveryId,
-                address = address,
-                phoneNumber = phoneNumber,
-                status = DeliveryStatus.Failed
+            return PaymentFailedEvent(
+                paymentId = paymentId,
+                orderId = orderId,
+                sum = sum,
+                status = PaymentStatus.Failed
             )
 
         if (httpResponse.status == "success")
-            return DeliveryCompletedSuccessfullyEvent(
-                DeliveryId = DeliveryId,
-                address = address,
-                phoneNumber = phoneNumber,
-                status = DeliveryStatus.Success
+            return PaymentCompletedSuccessfullyEvent(
+                paymentId = paymentId,
+                orderId = orderId,
+                sum = sum,
+                status = PaymentStatus.Success
             )
-
+*/
         return DeliveryAttemptEvent(
-            DeliveryId = DeliveryId,
-            address = address,
-            phoneNumber = phoneNumber,
-            status = DeliveryStatus.Pending
+            deliveryId = orderId,
+            timestamp = timestamp,
+            status = DeliveryStatus.Pending,
+            address = "",
+            phoneNumber = ""
         )
     }
 
     @StateTransitionFunc
-    fun deliveryAttemptApply(event: deliveryAttemptEvent) {
-        DeliveryId = event.deliveryId
-        address = event.address
+    fun DeliveryAttemptApply(event: DeliveryAttemptEvent) {
+
+        deliveryId = event.deliveryId;
+        timestamp = event.timestamp;
+        status = event.status;
+        address = event.address;
         phoneNumber = event.phoneNumber
     }
 
     @StateTransitionFunc
-    fun DeliverySuccessApply(event: DeliveryCompletedSuccessfullyEvent) {
-        address = event.addres
-        phoneNumber = event.phoneNumber
+    fun deliverySuccessApply(event: DeliveryCompletedSuccessfullyEvent) {
+        status = event.status
+        updatedAt = event.createdAt
     }
 
     @StateTransitionFunc
-    fun paymentFailedApply(event: DeliveyFailedEvent) {
-        address = event.addres
-        phoneNumber = event.phoneNumber
+    fun deliveryFailedApply(event: DeliveryFailedEvent) {
+        status = event.status
+        updatedAt = event.createdAt
     }
 }
+

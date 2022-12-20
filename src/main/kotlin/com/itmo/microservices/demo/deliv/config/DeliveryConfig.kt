@@ -1,8 +1,9 @@
+
 package com.itmo.microservices.demo.deliv.config
 
 import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
-import com.itmo.microservices.demo.deliv.logic.DeliveryAggregateState
-import com.itmo.microservices.demo.deliv.projections.AnnotationBasedDeliveryEventSubscriber
+import com.itmo.microservices.deliv.payment.logic.DeliveryAggregateState
+//import com.itmo.microservices.demo.deliv.projections.AnnotationBasedDeliveryEventsSubscriber
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
@@ -11,8 +12,9 @@ import ru.quipy.core.EventSourcingService
 import ru.quipy.core.EventSourcingServiceFactory
 import ru.quipy.streams.AggregateEventStreamManager
 import ru.quipy.streams.AggregateSubscriptionsManager
-import java.util.UUID
+import java.util.*
 import javax.annotation.PostConstruct
+
 
 @Configuration
 class DeliveryConfig {
@@ -24,23 +26,21 @@ class DeliveryConfig {
     @Autowired
     private lateinit var subscriptionsManager: AggregateSubscriptionsManager
 
-    @Autowired
-    private lateinit var deliveryEventSubscriber: AnnotationBasedDeliveryEventSubscriber
+    //@Autowired
+    //private lateinit var deliveryEventsSubscriber: AnnotationBasedDeliveryEventsSubscriber
 
     @Autowired
     private lateinit var eventStreamManager: AggregateEventStreamManager
 
     @PostConstruct
     fun init() {
-        subscriptionsManager.subscribe<DeliveryAggregate>(deliveryEventSubscriber)
+
+        //subscriptionsManager.subscribe<DeliveryAggregate>(deliveryEventsSubscriber)
 
         eventStreamManager.maintenance {
             onRecordHandledSuccessfully { streamName, eventName ->
                 logger.info("Stream $streamName successfully processed record of $eventName")
             }
-
-
-
 
             onBatchRead { streamName, batchSize ->
                 logger.info("Stream $streamName read batch size: $batchSize")
@@ -49,6 +49,6 @@ class DeliveryConfig {
     }
 
     @Bean
-    fun paymentESService(): EventSourcingService<UUID,DeliveryAggregate,DeliveryAggregateState> =
+    fun paymentESService(): EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState> =
         eventSourcingServiceFactory.create()
 }
