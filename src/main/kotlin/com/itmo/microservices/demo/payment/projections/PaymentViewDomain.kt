@@ -7,10 +7,10 @@ import java.util.*
 class PaymentViewDomain {
     @Document("payment-view")
     data class Payment(
-        val timestamp: Long,
-        val transactionId: UUID,
-        val orderId: UUID,
         val amount: Int,
+        val orderId: UUID,
+        val paymentTransactionId: UUID,
+        val timestamp: Long,
         val status: PaymentStatus,
     )
 }
