@@ -27,7 +27,7 @@ class AuthController(private val authService: AuthService) {
         ]
     )
     fun authenticate(@RequestBody request: AuthenticationRequest): AuthenticationResult =
-            authService.authenticate(request)
+        authService.authenticate(request)
 
     @PostMapping("/refresh")
     @Operation(
@@ -39,5 +39,5 @@ class AuthController(private val authService: AuthService) {
         security = [SecurityRequirement(name = "bearerAuth")]
     )
     fun refresh(authentication: Authentication): AuthenticationResult =
-            authService.refresh(authentication)
+        authService.refresh(authentication)
 }

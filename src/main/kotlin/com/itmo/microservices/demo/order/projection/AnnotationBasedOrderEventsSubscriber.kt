@@ -18,7 +18,7 @@ class AnnotationBasedOrderEventsSubscriber {
 
     @SubscribeEvent
     fun taskCreatedSubscriber(event: OrderCreatedEvent) {
-        logger.info("order created successfully: orderId {}, orderItems {}, price {}, date {}", event.orderId, event.orderItems, event.price, event.date)
+        logger.info("order created successfully: orderId {}, items {}, date {}", event.id, event.itemsMap, event.timeCreated)
     }
 }
 

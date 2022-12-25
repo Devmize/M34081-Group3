@@ -19,22 +19,44 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         return paymentId
     }
 
-    fun tryToPay(orderId: UUID, sum: Int): PaymentAttemptEvent {
-        /*
-        httpRequest("http://externalsystem/payment": orderId, sum)
-        */
-        return PaymentAttemptEvent(
-            paymentId = paymentId,
-            orderId = orderId,
-            sum = sum,
-            status = PaymentStatus.Pending
-        )
-    }
+    // чените сами это какая то чушь написана
 
-    fun updateStatus(orderId: UUID, sum: Int): Event<PaymentAggregate> {
-        /*
-        httpRequest("http://externalsystem/payment": orderId, sum)
-
+//    fun tryToPay(orderId: UUID, sum: Amount): PaymentAttemptEvent {
+//        httpRequest("http://externalsystem/payment": orderId, sum)
+//        return PaymentAttemptEvent(
+//            paymentId = paymentId,
+//            orderId = orderId,
+//            sum = sum,
+//            status = PaymentStatus.Pending
+//        )
+//    }
+//
+//    fun updateStatus(orderId: UUID, sum: Amount): Event<PaymentAggregate> {
+//        httpRequest("http://externalsystem/payment": orderId, sum)
+//
+//        if (httpResponse.status == "failure")
+//            return PaymentFailedEvent(
+//                paymentId = paymentId,
+//                orderId = orderId,
+//                sum = sum,
+//                status = PaymentStatus.Failed
+//            )
+//
+//        if (httpResponse.status == "success")
+//            return PaymentCompletedSuccessfullyEvent(
+//                paymentId = paymentId,
+//                orderId = orderId,
+//                sum = sum,
+//                status = PaymentStatus.Success
+//            )
+//
+//        return PaymentAttemptEvent(
+//            paymentId = paymentId,
+//            orderId = orderId,
+//            sum = sum,
+//            status = PaymentStatus.Pending
+//        )
+//    }
         if (httpResponse.status == "failure")
             return PaymentFailedEvent(
                 paymentId = paymentId,
