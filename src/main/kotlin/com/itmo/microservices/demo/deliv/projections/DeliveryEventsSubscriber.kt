@@ -25,15 +25,15 @@ class DeliveryEventsSubscriber {
         subscriptionsManager.createSubscriber(DeliveryAggregate::class, "some-meaningful-name") {
 
             `when`(DeliveryAttemptEvent::class) { event ->
-                logger.info("attempt to pay the order: paymentId {}, orderId {}, sum {}, status {}",
+                logger.info("attempt to delivery the order: DeliveryId {}, address {}, num {}, time {}",
                     event.deliveryId, event.address, event.phoneNumber, event.timestamp)
             }
             `when`(DeliveryCompletedSuccessfullyEvent::class) { event ->
-                logger.info("payment completed successfully: paymentId {}, orderId {}, sum {}, status {}",
+                logger.info("delivery completed successfully: DeliveryId {}, address {}, num {}, time {}",
                     event.deliveryId, event.address, event.phoneNumber, event.timestamp)
             }
             `when`(DeliveryFailedEvent::class) { event ->
-                logger.info("payment failed: paymentId {}, orderId {}, sum {}, status {}",
+                logger.info("delivery failed: DeliveryId {}, address {}, num {}, time {}",
                     event.deliveryId, event.address, event.phoneNumber, event.timestamp)
             }
         }
