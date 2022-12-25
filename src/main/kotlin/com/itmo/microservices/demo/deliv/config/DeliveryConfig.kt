@@ -1,37 +1,41 @@
-/*package com.itmo.microservices.demo.deliv.config
 
-import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
-import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
+package com.itmo.microservices.demo.deliv.config
+
+import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
+import com.itmo.microservices.deliv.payment.logic.DeliveryAggregateState
+//import com.itmo.microservices.demo.deliv.projections.AnnotationBasedDeliveryEventsSubscriber
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import ru.quipy.core.EventSourcingService
 import ru.quipy.core.EventSourcingServiceFactory
 import ru.quipy.streams.AggregateEventStreamManager
 import ru.quipy.streams.AggregateSubscriptionsManager
-import java.util.UUID
+import java.util.*
 import javax.annotation.PostConstruct
+
 
 @Configuration
 class DeliveryConfig {
+    @Autowired
+    private lateinit var eventSourcingServiceFactory: EventSourcingServiceFactory
 
     private val logger = LoggerFactory.getLogger(DeliveryConfig::class.java)
 
     @Autowired
     private lateinit var subscriptionsManager: AggregateSubscriptionsManager
 
-    @Autowired
-    private lateinit var deliveryEventSubscriber: AnnotationBasedDeliveryEventSubscriber
+    //@Autowired
+    //private lateinit var deliveryEventsSubscriber: AnnotationBasedDeliveryEventsSubscriber
 
     @Autowired
     private lateinit var eventStreamManager: AggregateEventStreamManager
 
-    @Autowired
-    private lateinit var eventSourcingServiceFactory: EventSourcingServiceFactory
-
     @PostConstruct
     fun init() {
-        subscriptionsManager.subscribe<DeliveryAggregate>(deliveryEventSubscriber)
+
+        //subscriptionsManager.subscribe<DeliveryAggregate>(deliveryEventsSubscriber)
 
         eventStreamManager.maintenance {
             onRecordHandledSuccessfully { streamName, eventName ->
@@ -45,5 +49,6 @@ class DeliveryConfig {
     }
 
     @Bean
-    fun userESService() = eventSourcingServiceFactory.create<UUID, DeliveryAggregate, DeliveryAggregateState>()
-}*/
+    fun paymentESService(): EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState> =
+        eventSourcingServiceFactory.create()
+}
