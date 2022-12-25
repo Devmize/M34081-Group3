@@ -1,16 +1,16 @@
 package com.itmo.microservices.demo.payment.logic
 
 import com.itmo.microservices.demo.payment.api.*
-import com.itmo.microservices.demo.payment.model.Amount
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
 import java.util.*
+import kotlin.properties.Delegates
 
 class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     private lateinit var paymentId: UUID
     private lateinit var orderId: UUID
-    private lateinit var sum: Amount
+    private var sum by Delegates.notNull<Int>()
     private lateinit var status: PaymentStatus
     private var createdAt: Long = System.currentTimeMillis()
     private var updatedAt: Long = System.currentTimeMillis()
@@ -19,8 +19,10 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         return paymentId
     }
 
-    fun tryToPay(orderId: UUID, sum: Amount): PaymentAttemptEvent {
+    fun tryToPay(orderId: UUID, sum: Int): PaymentAttemptEvent {
+        /*
         httpRequest("http://externalsystem/payment": orderId, sum)
+        */
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,
@@ -29,7 +31,8 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         )
     }
 
-    fun updateStatus(orderId: UUID, sum: Amount): Event<PaymentAggregate> {
+    fun updateStatus(orderId: UUID, sum: Int): Event<PaymentAggregate> {
+        /*
         httpRequest("http://externalsystem/payment": orderId, sum)
 
         if (httpResponse.status == "failure")
@@ -47,7 +50,7 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
                 sum = sum,
                 status = PaymentStatus.Success
             )
-
+*/
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,
@@ -61,18 +64,18 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         status = event.status
         sum = event.sum
         orderId = event.orderId
-        updatedAt = createdAt
+        updatedAt = event.createdAt
     }
 
     @StateTransitionFunc
     fun paymentSuccessApply(event: PaymentCompletedSuccessfullyEvent) {
         status = event.status
-        updatedAt = createdAt
+        updatedAt = event.createdAt
     }
 
     @StateTransitionFunc
     fun paymentFailedApply(event: PaymentFailedEvent) {
         status = event.status
-        updatedAt = createdAt
+        updatedAt = event.createdAt
     }
 }

@@ -1,4 +1,4 @@
-package com.itmo.microservices.demo.deliv.projections;
+/*package com.itmo.microservices.demo.deliv.projections;
 
 import com.itmo.microservices.demo.delivery.api.DeliveryAggregate;
 import org.springframework.stereotype.Service;
@@ -19,3 +19,4 @@ public class AnnotationBasedDeliveryEventSubscriber {
         logger.info("delivery ended successfully: deliveryId {}, TimeStamp {}, phoneNumber{}", event.orderId, event.timeStamp, event.phoneNumber)
     }
 }
+ */
