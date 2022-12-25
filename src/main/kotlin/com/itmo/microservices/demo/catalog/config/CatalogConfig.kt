@@ -1,4 +1,4 @@
-/*package com.itmo.microservices.demo.catalog.config
+package com.itmo.microservices.demo.catalog.config
 
 import com.itmo.microservices.demo.catalog.api.CatalogAggregate
 import com.itmo.microservices.demo.catalog.logic.CatalogAggregateState
@@ -52,4 +52,4 @@ class CatalogConfig {
 
     @Bean
     fun catalogESService() = eventSourcingServiceFactory.create<String, CatalogAggregate, CatalogAggregateState>()
-}*/
+}

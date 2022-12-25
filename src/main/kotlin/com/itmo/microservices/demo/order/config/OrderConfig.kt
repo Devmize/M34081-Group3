@@ -1,4 +1,4 @@
-/*package com.itmo.microservices.demo.order.config
+package com.itmo.microservices.demo.order.config
 
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.logic.Order
@@ -51,5 +51,3 @@ class OrderConfig {
         return eventSourcingServiceFactory.create()
     }
 }
-
- */
