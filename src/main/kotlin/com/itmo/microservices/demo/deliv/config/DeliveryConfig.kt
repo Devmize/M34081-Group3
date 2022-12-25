@@ -2,7 +2,7 @@
 package com.itmo.microservices.demo.deliv.config
 
 import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
-import com.itmo.microservices.deliv.payment.logic.DeliveryAggregateState
+import com.itmo.microservices.demo.deliv.logic.DeliveryAggregateState
 //import com.itmo.microservices.demo.deliv.projections.AnnotationBasedDeliveryEventsSubscriber
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -49,6 +49,6 @@ class DeliveryConfig {
     }
 
     @Bean
-    fun paymentESService(): EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState> =
+    fun deliveryESService(): EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState> =
         eventSourcingServiceFactory.create()
 }

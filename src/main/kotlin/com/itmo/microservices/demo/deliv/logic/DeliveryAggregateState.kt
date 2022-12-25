@@ -1,5 +1,5 @@
 
-package com.itmo.microservices.deliv.payment.logic
+package com.itmo.microservices.demo.deliv.logic
 
 import com.itmo.microservices.demo.deliv.api.*
 import ru.quipy.core.annotations.StateTransitionFunc
