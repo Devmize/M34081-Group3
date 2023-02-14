@@ -1,6 +1,7 @@
 package com.itmo.microservices.demo.user.logic
 
 import com.itmo.microservices.demo.user.api.UserAggregate
+import com.itmo.microservices.demo.user.api.UserCreatedEvent
 import ru.quipy.domain.AggregateState
 import java.math.BigDecimal
 import java.util.UUID
@@ -14,5 +15,13 @@ class UserAggregateState: AggregateState<UUID, UserAggregate> {
 
     override fun getId(): UUID {
         return this.userId
+    }
+
+    fun createNewUser(name: String): UserCreatedEvent {
+        return UserCreatedEvent(name);
+    }
+
+    fun createNewUser(event: UserCreatedEvent) {
+        this.userName = event.userName;
     }
 }

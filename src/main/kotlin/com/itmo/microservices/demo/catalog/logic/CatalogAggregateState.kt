@@ -19,6 +19,7 @@ class CatalogAggregateState : AggregateState<String, CatalogAggregate> {
         return this.catalogId
     }
 
+
     @StateTransitionFunc
     fun productPriceChangedApply(event: ProductPriceChangedEvent) {
         products[event.productId]?.price = event.price
