@@ -5,7 +5,6 @@ import com.itmo.microservices.demo.order.logic.Order
 import com.itmo.microservices.demo.payment.api.PaymentAggregate
 import com.itmo.microservices.demo.payment.api.PaymentAttemptEvent
 import com.itmo.microservices.demo.payment.logic.PaymentAggregateState
-import io.swagger.annotations.SecurityDefinition
 import org.springframework.web.bind.annotation.*
 import ru.quipy.core.EventSourcingService
 import java.util.*
@@ -14,9 +13,9 @@ import java.util.*
 @RequestMapping("/orders")
 class OrderController(val orderEsService: EventSourcingService<UUID, OrderAggregate, Order>,
     val paymentEsService: EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState>) {
-
+/*
     @PostMapping("/{order_id}/payment")
     fun createPayment(@PathVariable order_id: UUID) : PaymentAttemptEvent {
         return paymentEsService.create { it.tryToPay(orderId = order_id, sum = ) }
-    }
+    }*/
 }

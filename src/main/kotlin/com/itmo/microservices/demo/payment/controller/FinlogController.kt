@@ -14,12 +14,12 @@ import java.util.*
 @RestController
 @RequestMapping("/finlog")
 class FinlogController (val paymentEsService: EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState>) {
-
+/*
     @GetMapping(value = {"/{order_id}", "" })
     fun getFinlog(@PathVariable(required = false) order_id: UUID) : List<UserAccountFinancialLogRecordDto> {
         if (order_id != null)
             return paymentEsService.getState(order_id)
         else
             return paymentEsService.getState()
-    }
+    }*/
 }
