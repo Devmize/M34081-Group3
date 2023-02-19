@@ -13,7 +13,7 @@ import ru.quipy.streams.annotation.SubscribeEvent
 
 @Service
 @AggregateSubscriber(
-    aggregateClass = DeliveryAggregate::class, subscriberName = "demo-subs-stream"
+    aggregateClass = DeliveryAggregate::class, subscriberName = "delivery-subs-stream"
 )
 class AnnotationBasedDeliveryEventsSubscriber {
 

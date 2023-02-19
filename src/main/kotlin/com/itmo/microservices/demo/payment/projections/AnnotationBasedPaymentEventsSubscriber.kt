@@ -13,7 +13,7 @@ import ru.quipy.streams.annotation.SubscribeEvent
 
 @Service
 @AggregateSubscriber(
-    aggregateClass = PaymentAggregate::class, subscriberName = "demo-subs-stream"
+    aggregateClass = PaymentAggregate::class, subscriberName = "payment-subs-stream"
 )
 class AnnotationBasedPaymentEventsSubscriber {
 
