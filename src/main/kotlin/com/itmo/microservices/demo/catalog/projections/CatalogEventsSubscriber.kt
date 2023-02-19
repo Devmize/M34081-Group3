@@ -21,7 +21,7 @@ class CatalogEventsSubscriber {
 
     @PostConstruct
     fun init() {
-        subscriptionsManager.createSubscriber(CatalogAggregate::class, "some-meaningful-name") {
+        subscriptionsManager.createSubscriber(CatalogAggregate::class, "catalog") {
 
             `when`(ProductPriceChangedEvent::class) { event ->
                 logger.info("productPriceChanged: productId {}, new price {}", event.productId, event.price)
