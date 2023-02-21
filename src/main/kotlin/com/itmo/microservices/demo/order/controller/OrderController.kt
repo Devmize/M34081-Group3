@@ -13,9 +13,9 @@ import java.util.*
 @RequestMapping("/orders")
 class OrderController(val orderEsService: EventSourcingService<UUID, OrderAggregate, Order>,
     val paymentEsService: EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState>) {
-/*
+
     @PostMapping("/{order_id}/payment")
     fun createPayment(@PathVariable order_id: UUID) : PaymentAttemptEvent {
-        return paymentEsService.create { it.tryToPay(orderId = order_id, sum = ) }
-    }*/
+        return paymentEsService.create { it.tryToPay(orderId = order_id, sum = 0) }
+    }
 }

@@ -89,6 +89,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>3.1.3</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.6.6</version>
@@ -143,74 +149,86 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>bson</artifactId>
-            <version>4.6.1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync -->
+
+
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
             <version>4.6.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-core</artifactId>
+            <version>4.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>bson</artifactId>
+            <version>4.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
 
 
-    </dependencies>
 
-    <scm>
-        <connection>scm:git:https://github.com/${github}.git</connection>
-        <developerConnection>scm:git:https://github.com/${github}.git</developerConnection>
-        <tag>HEAD</tag>
-        <url>https://github.com/${github}.git</url>
-    </scm>
+     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo1.maven.org/maven2/</url>
-        </repository>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/microservices-itmo-21-22/common-lib</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    
-    <build>
-        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <configuration>
-                    <args>
-                        <arg>-Xjsr305=strict</arg>
-                    </args>
-                    <compilerPlugins>
-                        <plugin>spring</plugin>
-                    </compilerPlugins>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>kapt</id>
-                        <goals>
-                            <goal>kapt</goal>
-                        </goals>
-                        <configuration>
-                            <sourceDirs>
-                                <sourceDir>src/main/kotlin</sourceDir>
-                                <sourceDir>src/main/java</sourceDir>
-                            </sourceDirs>
-                            <annotationProcessorPaths>
-                                <!-- Specify your annotation processors here. -->
+     <scm>
+         <connection>scm:git:https://github.com/${github}.git</connection>
+         <developerConnection>scm:git:https://github.com/${github}.git</developerConnection>
+         <tag>HEAD</tag>
+         <url>https://github.com/${github}.git</url>
+     </scm>
+
+     <repositories>
+         <repository>
+             <id>central</id>
+             <url>https://repo1.maven.org/maven2/</url>
+         </repository>
+         <repository>
+             <id>github</id>
+             <url>https://maven.pkg.github.com/microservices-itmo-21-22/common-lib</url>
+             <snapshots>
+                 <enabled>true</enabled>
+             </snapshots>
+         </repository>
+     </repositories>
+
+     <build>
+         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+         <plugins>
+             <plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+             </plugin>
+             <plugin>
+                 <groupId>org.jetbrains.kotlin</groupId>
+                 <artifactId>kotlin-maven-plugin</artifactId>
+                 <configuration>
+                     <args>
+                         <arg>-Xjsr305=strict</arg>
+                     </args>
+                     <compilerPlugins>
+                         <plugin>spring</plugin>
+                     </compilerPlugins>
+                 </configuration>
+                 <executions>
+                     <execution>
+                         <id>kapt</id>
+                         <goals>
+                             <goal>kapt</goal>
+                         </goals>
+                         <configuration>
+                             <sourceDirs>
+                                 <sourceDir>src/main/kotlin</sourceDir>
+                                 <sourceDir>src/main/java</sourceDir>
+                             </sourceDirs>
+                             <annotationProcessorPaths>
+                                 <!-- Specify your annotation processors here. -->
                                 <annotationProcessorPath>
                                     <groupId>org.springframework.boot</groupId>
                                     <artifactId>spring-boot-configuration-processor</artifactId>
