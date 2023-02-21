@@ -15,18 +15,22 @@ class DeliveryController(
     val deliveryEsService: EventSourcingService<UUID, DeliveryAggregate, Account>
 ) {
 
-    @PostMapping("/{UUID/delivery}")
-    fun attemptDelivery(@PathVariable holderId: UUID) : DeliveryAttemptEvent {
-        return deliveryEsService.create { it.createNewDelivery(holderId = holderId) }
+    @GetMapping("/deliveryId", "")
+    fun attemptDelivery(@PathVariable(required = false) deliveryID: UUID) : DeliveryAttemptEvent {
+        if(deliveryID != null) {
+            return deliveryEsService.getState {deliveryID };
+        } else {
+            return deliveryEsService.getState {};
+        }
     }
 
-    @PostMapping("/{UUID/delivery}")
-    fun CompletedSuccessfullyDelivery(@PathVariable holderId: UUID) : DeliveryCompletedSuccessfullyEvent {
-        return deliveryEsService.getState(holderId , "Success");
+    @PostMapping(value = "/{UUID}/delivery")
+    fun CompletedSuccessfullyDelivery(@PathVariable deliveryID: UUID) : DeliveryCompletedSuccessfullyEvent {
+        return deliveryEsService.create(CompleteDeliv(deliveryID = deliveryID)  );
     }
 
-    @PostMapping("/{UUID/delivery}")
-    fun FailedDelivery(@PathVariable holderId: UUID) : DeliveryFailedEvent {
-        return deliveryEsService.getState(holderId, "Success");
+    @PostMapping(value = "/{UUID}/delivery")
+    fun FailedDelivery(@PathVariable deliveryID: UUID) : DeliveryFailedEvent {
+        return deliveryEsService.create(FailedDeliv(deliveryID = deliveryID));
     }
 }
