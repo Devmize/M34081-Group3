@@ -1,11 +1,12 @@
 package com.itmo.microservices.demo.catalog.model
 
+import com.itmo.microservices.demo.catalog.logic.Product
 import java.util.*
 
 data class CatalogItemDto(
     val id: UUID,
     val title: String,
     val description: String,
-    val price: Int = 100,
+    val price: Double = 100.0,
     val amount: Int
 )

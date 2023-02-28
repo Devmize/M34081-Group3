@@ -8,7 +8,7 @@ import java.math.BigDecimal
 import java.util.UUID
 
 class UserAggregateState: AggregateState<UUID, UserAggregate> {
-    private lateinit var userId: UUID
+    private var userId: UUID = UUID.randomUUID()
     private var userName: String? = ""
     private var surname: String? = ""
     private var address: String? = ""
