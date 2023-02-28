@@ -1,9 +1,8 @@
+package com.itmo.microservices.demo.delivery.config
 
-package com.itmo.microservices.demo.deliv.config
-
-import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
-import com.itmo.microservices.demo.deliv.logic.DeliveryAggregateState
-//import com.itmo.microservices.demo.deliv.projections.AnnotationBasedDeliveryEventsSubscriber
+import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
+import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
+import com.itmo.microservices.demo.delivery.projections.AnnotationBasedDeliveryEventsSubscriber
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
@@ -26,8 +25,8 @@ class DeliveryConfig {
     @Autowired
     private lateinit var subscriptionsManager: AggregateSubscriptionsManager
 
-    //@Autowired
-    //private lateinit var deliveryEventsSubscriber: AnnotationBasedDeliveryEventsSubscriber
+    @Autowired
+    private lateinit var deliveryEventsSubscriber: AnnotationBasedDeliveryEventsSubscriber
 
     @Autowired
     private lateinit var eventStreamManager: AggregateEventStreamManager
@@ -35,7 +34,7 @@ class DeliveryConfig {
     @PostConstruct
     fun init() {
 
-        //subscriptionsManager.subscribe<DeliveryAggregate>(deliveryEventsSubscriber)
+        subscriptionsManager.subscribe<DeliveryAggregate>(deliveryEventsSubscriber)
 
         eventStreamManager.maintenance {
             onRecordHandledSuccessfully { streamName, eventName ->

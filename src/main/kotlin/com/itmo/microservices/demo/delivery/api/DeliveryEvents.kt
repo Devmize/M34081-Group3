@@ -1,9 +1,7 @@
-
-package com.itmo.microservices.demo.deliv.api
+package com.itmo.microservices.demo.delivery.api
 
 import ru.quipy.core.annotations.DomainEvent
 import ru.quipy.domain.Event
-import java.sql.Timestamp
 import java.util.*
 
 const val DELIVERY_ATTEMPT = "DELIVERY_ATTEMPT_EVENT"
@@ -17,7 +15,7 @@ enum class DeliveryStatus{
 @DomainEvent(name = DELIVERY_ATTEMPT)
 class DeliveryAttemptEvent(
     val deliveryId: UUID,
-    val timestamp: Timestamp,
+    val timestamp: Long,
     val status: DeliveryStatus,
     val address: String,
     val phoneNumber: String,
@@ -29,7 +27,7 @@ class DeliveryAttemptEvent(
 @DomainEvent(name = DELIVERY_COMPLETED_SUCCESSFULLY)
 class DeliveryCompletedSuccessfullyEvent(
     val deliveryId: UUID,
-    val timestamp: Timestamp,
+    val timestamp: Long,
     val status: DeliveryStatus,
     val address: String,
     val phoneNumber: String,
@@ -41,7 +39,7 @@ class DeliveryCompletedSuccessfullyEvent(
 @DomainEvent(name = DELIVERY_FAILED)
 class DeliveryFailedEvent(
     val deliveryId: UUID,
-    val timestamp: Timestamp,
+    val timestamp: Long,
     val status: DeliveryStatus,
     val address: String,
     val phoneNumber: String,
