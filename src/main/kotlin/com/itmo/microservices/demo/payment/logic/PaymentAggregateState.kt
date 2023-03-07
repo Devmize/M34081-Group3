@@ -30,7 +30,6 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     }
 
       fun updateStatus(orderId: UUID, sum: Int): Event<PaymentAggregate> {
-
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,

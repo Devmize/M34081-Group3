@@ -1,10 +1,9 @@
+package com.itmo.microservices.demo.delivery.projections
 
-package com.itmo.microservices.demo.payment.projections
-
-import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
-import com.itmo.microservices.demo.deliv.api.DeliveryAttemptEvent
-import com.itmo.microservices.demo.deliv.api.DeliveryCompletedSuccessfullyEvent
-import com.itmo.microservices.demo.deliv.api.DeliveryFailedEvent
+import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
+import com.itmo.microservices.demo.delivery.api.DeliveryAttemptEvent
+import com.itmo.microservices.demo.delivery.api.DeliveryCompletedSuccessfullyEvent
+import com.itmo.microservices.demo.delivery.api.DeliveryFailedEvent
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
@@ -17,7 +16,7 @@ import ru.quipy.streams.annotation.SubscribeEvent
 )
 class AnnotationBasedDeliveryEventsSubscriber {
 
-    val logger: Logger = LoggerFactory.getLogger(AnnotationBasedPaymentEventsSubscriber::class.java)
+    val logger: Logger = LoggerFactory.getLogger(AnnotationBasedDeliveryEventsSubscriber::class.java)
 
     @SubscribeEvent
     fun taskCreatedSubscriber(event: DeliveryAttemptEvent) {

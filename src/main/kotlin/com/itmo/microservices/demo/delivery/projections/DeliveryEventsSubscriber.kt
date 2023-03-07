@@ -1,9 +1,9 @@
-package com.itmo.microservices.demo.deliv.projections
+package com.itmo.microservices.demo.delivery.projections
 
-import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
-import com.itmo.microservices.demo.deliv.api.DeliveryAttemptEvent
-import com.itmo.microservices.demo.deliv.api.DeliveryCompletedSuccessfullyEvent
-import com.itmo.microservices.demo.deliv.api.DeliveryFailedEvent
+import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
+import com.itmo.microservices.demo.delivery.api.DeliveryAttemptEvent
+import com.itmo.microservices.demo.delivery.api.DeliveryCompletedSuccessfullyEvent
+import com.itmo.microservices.demo.delivery.api.DeliveryFailedEvent
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired

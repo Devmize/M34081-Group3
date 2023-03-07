@@ -1,17 +1,15 @@
+package com.itmo.microservices.demo.delivery.logic
 
-package com.itmo.microservices.demo.deliv.logic
-
-import com.itmo.microservices.demo.deliv.api.*
+import com.itmo.microservices.demo.delivery.api.*
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
-import java.sql.Timestamp
 import java.util.*
 import kotlin.properties.Delegates
 
 class DeliveryAggregateState : AggregateState<UUID, DeliveryAggregate> {
     private lateinit var deliveryId: UUID
-    private lateinit var timestamp: Timestamp
+    private var timestamp by Delegates.notNull<Long>()
     private lateinit var status: DeliveryStatus
     private lateinit var address: String
     private lateinit var phoneNumber: String
@@ -22,51 +20,28 @@ class DeliveryAggregateState : AggregateState<UUID, DeliveryAggregate> {
         return deliveryId
     }
 
-    fun tryToPay(orderId: UUID, sum: Int, timestamp: Timestamp): DeliveryAttemptEvent {
-        /*
-        httpRequest("http://externalsystem/delivery": orderId, sum)
-        */
+    fun createDelivery(orderId: UUID, timestamp: Long, address: String, phoneNumber: String): DeliveryAttemptEvent {
         return DeliveryAttemptEvent(
             deliveryId = orderId,
             timestamp = timestamp,
             status = DeliveryStatus.Pending,
-            address = "",
-            phoneNumber = ""
+            address = address,
+            phoneNumber = phoneNumber
         )
     }
 
-    fun updateStatus(orderId: UUID, sum: Int, timestamp: Timestamp): Event<DeliveryAggregate> {
-        /*
-        httpRequest("http://externalsystem/delivery": orderId, sum)
-
-        if (httpResponse.status == "failure")
-            return PaymentFailedEvent(
-                paymentId = paymentId,
-                orderId = orderId,
-                sum = sum,
-                status = PaymentStatus.Failed
-            )
-
-        if (httpResponse.status == "success")
-            return PaymentCompletedSuccessfullyEvent(
-                paymentId = paymentId,
-                orderId = orderId,
-                sum = sum,
-                status = PaymentStatus.Success
-            )
-*/
+    fun updateStatus(orderId: UUID, timestamp: Long, address: String, phoneNumber: String): Event<DeliveryAggregate> {
         return DeliveryAttemptEvent(
             deliveryId = orderId,
             timestamp = timestamp,
             status = DeliveryStatus.Pending,
-            address = "",
-            phoneNumber = ""
+            address = address,
+            phoneNumber = phoneNumber
         )
     }
 
     @StateTransitionFunc
-    fun DeliveryAttemptApply(event: DeliveryAttemptEvent) {
-
+    fun deliveryAttemptApply(event: DeliveryAttemptEvent) {
         deliveryId = event.deliveryId;
         timestamp = event.timestamp;
         status = event.status;
