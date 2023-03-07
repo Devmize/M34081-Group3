@@ -12,7 +12,7 @@ import ru.quipy.streams.annotation.SubscribeEvent
 
 @Service
 @AggregateSubscriber(
-    aggregateClass = CatalogAggregate::class, subscriberName = "demo-subs-stream"
+    aggregateClass = CatalogAggregate::class, subscriberName = "catalog-subs-stream"
 )
 class AnnotationBasedCatalogEventsSubscriber {
 

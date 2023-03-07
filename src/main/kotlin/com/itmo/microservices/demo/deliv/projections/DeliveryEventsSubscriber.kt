@@ -1,5 +1,4 @@
-
-package com.itmo.microservices.demo.delivery.projections
+package com.itmo.microservices.demo.deliv.projections
 
 import com.itmo.microservices.demo.deliv.api.DeliveryAggregate
 import com.itmo.microservices.demo.deliv.api.DeliveryAttemptEvent
@@ -22,7 +21,7 @@ class DeliveryEventsSubscriber {
 
     @PostConstruct
     fun init() {
-        subscriptionsManager.createSubscriber(DeliveryAggregate::class, "some-meaningful-name") {
+        subscriptionsManager.createSubscriber(DeliveryAggregate::class, "delivery") {
 
             `when`(DeliveryAttemptEvent::class) { event ->
                 logger.info("attempt to delivery the order: DeliveryId {}, address {}, num {}, time {}",

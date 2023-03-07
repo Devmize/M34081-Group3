@@ -21,7 +21,7 @@ class PaymentEventsSubscriber {
 
     @PostConstruct
     fun init() {
-        subscriptionsManager.createSubscriber(PaymentAggregate::class, "some-meaningful-name") {
+        subscriptionsManager.createSubscriber(PaymentAggregate::class, "payment") {
 
             `when`(PaymentAttemptEvent::class) { event ->
                 logger.info("attempt to pay the order: paymentId {}, orderId {}, sum {}, status {}",
