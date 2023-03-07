@@ -1,14 +1,12 @@
 package com.itmo.microservices.demo.user.logic
 
 import com.itmo.microservices.demo.user.api.UserAggregate
-import com.itmo.microservices.demo.user.api.UserCreatedEvent
-import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import java.math.BigDecimal
 import java.util.UUID
 
 class UserAggregateState: AggregateState<UUID, UserAggregate> {
-    private var userId: UUID = UUID.randomUUID()
+    private lateinit var userId: UUID
     private var userName: String? = ""
     private var surname: String? = ""
     private var address: String? = ""
@@ -16,16 +14,5 @@ class UserAggregateState: AggregateState<UUID, UserAggregate> {
 
     override fun getId(): UUID {
         return this.userId
-    }
-
-
-    fun createNewUser(userName: String): UserCreatedEvent {
-        return UserCreatedEvent(userName);
-    }
-
-    @StateTransitionFunc
-    fun createNewUser(event: UserCreatedEvent) {
-        println(111111111)
-        this.userName = event.userName;
     }
 }

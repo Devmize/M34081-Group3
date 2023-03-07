@@ -11,13 +11,6 @@ spring:
     hibernate:
       ddl-auto: update
 
-
-event:
-  sourcing:
-    auto-scan-enabled: true
-    scan-package: com.itmo
-
-
 server:
   error:
     include-exception: false

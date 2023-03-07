@@ -10,7 +10,7 @@ import ru.quipy.streams.annotation.SubscribeEvent
 
 @Service
 @AggregateSubscriber(
-    aggregateClass = OrderAggregate::class, subscriberName = "order-subs-stream"
+    aggregateClass = OrderAggregate::class, subscriberName = "demo-subs-stream"
 )
 class AnnotationBasedOrderEventsSubscriber {
 
