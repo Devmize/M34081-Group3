@@ -20,7 +20,10 @@ class UserLogicController(val userEsService: EventSourcingService<UUID, UserAggr
 
     @PostMapping
     fun createUser(@RequestBody body: UserLogicCreateRequest): UserCreatedEvent {
-        return userEsService.create { it.createNewUser(name = body.name) }
+        val e: UserCreatedEvent = userEsService.create { it.createNewUser(userName = body.name) }
+        println(userEsService.getState(e.id))
+        return e
+
     }
 
 }

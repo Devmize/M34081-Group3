@@ -19,12 +19,13 @@ class UserAggregateState: AggregateState<UUID, UserAggregate> {
     }
 
 
-    fun createNewUser(name: String): UserCreatedEvent {
-        return UserCreatedEvent(name);
+    fun createNewUser(userName: String): UserCreatedEvent {
+        return UserCreatedEvent(userName);
     }
 
     @StateTransitionFunc
     fun createNewUser(event: UserCreatedEvent) {
+        println(111111111)
         this.userName = event.userName;
     }
 }
