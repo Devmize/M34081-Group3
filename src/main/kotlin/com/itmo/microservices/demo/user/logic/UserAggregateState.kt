@@ -18,6 +18,9 @@ class UserAggregateState: AggregateState<UUID, UserAggregate> {
         return this.userId
     }
 
+    fun getUserName(): String? {
+        return this.userName
+    }
 
     fun createNewUser(userName: String): UserCreatedEvent {
         return UserCreatedEvent(userName);
