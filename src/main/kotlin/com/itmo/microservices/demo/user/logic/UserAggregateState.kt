@@ -9,7 +9,7 @@ import java.util.UUID
 
 class UserAggregateState: AggregateState<UUID, UserAggregate> {
     private var userId: UUID = UUID.randomUUID()
-    private var userName: String? = ""
+    private var userName: String = ""
     private var surname: String? = ""
     private var address: String? = ""
     private var phoneNumber: BigDecimal? = BigDecimal.ZERO
@@ -18,7 +18,7 @@ class UserAggregateState: AggregateState<UUID, UserAggregate> {
         return this.userId
     }
 
-    fun getUserName(): String? {
+    fun getUserName(): String {
         return this.userName
     }
 
