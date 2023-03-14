@@ -23,7 +23,6 @@ class UserLogicController(
         }
 
         return UserDto(UUID.fromString("ccd3b1b1-456e-48b6-910e-5efbfa0653f7"), "name")
-
     }
 
     @PostMapping

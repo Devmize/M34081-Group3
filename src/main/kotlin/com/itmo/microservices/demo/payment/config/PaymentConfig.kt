@@ -37,11 +37,11 @@ class PaymentConfig {
 
         eventStreamManager.maintenance {
             onRecordHandledSuccessfully { streamName, eventName ->
-                logger.info("Stream $streamName successfully processed record of $eventName")
+                logger.debug("Stream $streamName successfully processed record of $eventName")
             }
 
             onBatchRead { streamName, batchSize ->
-                logger.info("Stream $streamName read batch size: $batchSize")
+                logger.debug("Stream $streamName read batch size: $batchSize")
             }
         }
     }

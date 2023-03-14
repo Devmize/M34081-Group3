@@ -8,7 +8,7 @@ import java.math.BigDecimal
 import java.util.UUID
 
 class UserAggregateState: AggregateState<UUID, UserAggregate> {
-    private var userId: UUID = UUID.randomUUID()
+    private lateinit var userId: UUID
     private var userName: String = ""
     private var surname: String? = ""
     private var address: String? = ""
@@ -22,13 +22,15 @@ class UserAggregateState: AggregateState<UUID, UserAggregate> {
         return this.userName
     }
 
-    fun createNewUser(userName: String): UserCreatedEvent {
-        return UserCreatedEvent(userName);
+    fun createNewUser(id: UUID = UUID.randomUUID(), userName: String): UserCreatedEvent {
+
+        return UserCreatedEvent(id, userName);
     }
 
     @StateTransitionFunc
     fun createNewUser(event: UserCreatedEvent) {
         println(111111111)
+        this.userId = event.userId
         this.userName = event.userName;
     }
 }
