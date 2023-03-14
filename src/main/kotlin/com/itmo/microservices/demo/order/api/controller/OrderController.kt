@@ -1,9 +1,15 @@
 package com.itmo.microservices.demo.order.api.controller
 
+import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
+import com.itmo.microservices.demo.delivery.dto.BookingDto
+import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.dto.AddItemDto
 import com.itmo.microservices.demo.order.api.dto.OrderDto
 import com.itmo.microservices.demo.order.logic.Order
+import com.itmo.microservices.demo.payment.api.PaymentAggregate
+import com.itmo.microservices.demo.payment.dto.PaymentSubmissionDto
+import com.itmo.microservices.demo.payment.logic.PaymentAggregateState
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.media.Content
 import io.swagger.v3.oas.annotations.responses.ApiResponse
@@ -14,7 +20,9 @@ import java.util.*
 
 @RestController
 @RequestMapping("/orders")
-class OrderController(private val orderEsService: EventSourcingService<UUID, OrderAggregate, Order>) {
+class OrderController(private val orderEsService: EventSourcingService<UUID, OrderAggregate, Order>,
+                      val paymentEsService: EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState>,
+                      val deliveryEsService: EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState>, ) {
 
     @PostMapping("/create")
     @Operation(
@@ -74,4 +82,22 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         return null
     }
 
+    @PostMapping("/{order_id}/payment")
+    @Operation(security = [SecurityRequirement(name = "bearerAuth")])
+    fun createPayment(@PathVariable order_id: UUID) : PaymentSubmissionDto? {
+        val order = orderEsService.getState(order_id) ?: return null
+        var sum = 0;
+        for (item in order.itemsMap) {
+            sum += item.value
+        }
+        paymentEsService.create { it.tryToPay(order_id, sum) }
+        return PaymentSubmissionDto(System.currentTimeMillis(), UUID.randomUUID())
+    }
+
+    @PostMapping("/{order_id}/delivery")
+    @Operation(security = [SecurityRequirement(name = "bearerAuth")])
+    fun setTimeOfDelivery(@RequestParam slot: Int, @PathVariable order_id: UUID) : BookingDto {
+        deliveryEsService.create { it.createDelivery(order_id, slot.toLong(), "", "") }
+        return BookingDto(UUID.randomUUID(), setOf(UUID.randomUUID()))
+    }
 }

@@ -19,7 +19,6 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         return paymentId
     }
 
-
     fun tryToPay(orderId: UUID, sum: Int): PaymentAttemptEvent {
         return PaymentAttemptEvent(
             paymentId = paymentId,
@@ -29,12 +28,12 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         )
     }
 
-      fun updateStatus(orderId: UUID, sum: Int): Event<PaymentAggregate> {
+      fun updateStatus(orderId: UUID, sum: Int, status: PaymentStatus): Event<PaymentAggregate> {
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,
             sum = sum,
-            status = PaymentStatus.Pending
+            status = status
         )
     }
 
