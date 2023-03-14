@@ -5,6 +5,6 @@ import java.util.*
 data class PaymentLogRecordModel(
     val timestamp: Long?,
     val status: PaymentStatus?,
-    val amount: Amount?,
+    val amount: Double?,
     val transactionId: UUID?,
 )
