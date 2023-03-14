@@ -1,5 +1,6 @@
 package com.itmo.microservices.demo.order.projection
 
+import com.itmo.microservices.demo.order.api.OrderAddItemEvent
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.OrderCreatedEvent
 import org.slf4j.Logger
@@ -22,7 +23,11 @@ class OrderEventsSubscriber {
         subscriptionsManager.createSubscriber(OrderAggregate::class, "order") {
 
             `when`(OrderCreatedEvent::class) { event ->
-                logger.info("order created successfully: orderId {}, items {}, date {}", event.id, event.itemsMap,  event.timeCreated)
+                logger.info("order created successfully: orderId {}, items {}, timeCreated {}, status {}, deliveryDuration {}, paymentHistory {}", event.orderId, event.itemsMap,  event.timeCreated, event.status, event.deliveryDuration, event.paymentHistory)
+            }
+
+            `when`(OrderAddItemEvent::class) { event ->
+                logger.info("item added into order successfully: orderId {}, itemId {}, amount {}", event.orderId, event.itemId, event.amount)
             }
         }
     }

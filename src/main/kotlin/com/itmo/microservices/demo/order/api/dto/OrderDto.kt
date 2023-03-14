@@ -7,7 +7,7 @@ data class OrderDto(
     val id: UUID,
     val timeCreated: Number,
     val status: OrderStatus,
-    val itemsMap: Map<UUID, Double>,
+    val itemsMap: Map<UUID, Int>,
     val deliveryDuration: Number,
     val paymentHistory: List<PaymentLogRecord>
 )

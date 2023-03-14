@@ -10,7 +10,7 @@ class OrderViewDomain {
     data class Order(
         var id: UUID,
         var status: OrderStatus,
-        var itemsMap: Map<UUID, Double>,
+        var itemsMap: Map<UUID, Int>,
         var timeCreated: Number,
         var deliveryDuration: Number,
         var paymentHistory: List<PaymentLogRecordModel>

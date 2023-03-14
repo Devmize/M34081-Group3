@@ -1,6 +1,7 @@
 package com.itmo.microservices.demo.order.api.controller
 
 import com.itmo.microservices.demo.order.api.OrderAggregate
+import com.itmo.microservices.demo.order.api.dto.AddItemDto
 import com.itmo.microservices.demo.order.api.dto.OrderDto
 import com.itmo.microservices.demo.order.logic.Order
 import io.swagger.v3.oas.annotations.Operation
@@ -27,7 +28,25 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         return OrderDto(event.id, event.createdAt, event.status, event.itemsMap, event.deliveryDuration, event.paymentHistory)
     }
 
-    @PostMapping("/{orderId}/items/{itemId}?amount={amount}")
+//    @PostMapping("/{orderId}/items/{itemId}?amount={amount}")
+//    @Operation(
+//        summary = "Add item into order",
+//        responses = [
+//            ApiResponse(description = "Item added into order", responseCode = "200"),
+//            ApiResponse(description = "Can't add item into order", responseCode = "404", content = [Content()])
+//        ],
+//        security = [SecurityRequirement(name = "bearerAuth")]
+//    )
+//    fun addItemIntoOrder(@PathVariable orderId: UUID,
+//                         @PathVariable itemId: UUID,
+//                         @PathVariable amount: Int
+//    ) {
+//        orderEsService.update(orderId) {
+//            it.addItemIntoOrder(orderId, itemId, amount)
+//        }
+//    }
+
+    @PostMapping("/{orderId}")
     @Operation(
         summary = "Add item into order",
         responses = [
@@ -36,12 +55,9 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         ],
         security = [SecurityRequirement(name = "bearerAuth")]
     )
-    fun addItemIntoOrder(@PathVariable orderId: UUID,
-                         @PathVariable itemId: UUID,
-                         @PathVariable amount: Number
-    ) {
-        orderEsService.create {
-            it.addItemIntoOrder(orderId, itemId, amount)
+    fun addItemIntoOrder(@RequestBody request: AddItemDto) {
+        orderEsService.update(request.orderId) {
+            it.addItemIntoOrder(request.orderId, request.itemId, request.amount)
         }
     }
 

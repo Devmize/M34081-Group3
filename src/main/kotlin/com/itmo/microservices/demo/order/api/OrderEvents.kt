@@ -14,7 +14,7 @@ const val ORDER_ADD_ITEM = "ORDER_ADD_ITEM_EVENT"
 data class OrderCreatedEvent(
     val orderId: UUID,
     val status: OrderStatus,
-    val itemsMap: Map<UUID, Double>,
+    val itemsMap: Map<UUID, Int>,
     val timeCreated: Number,
     val deliveryDuration: Number,
     val paymentHistory: List<PaymentLogRecord>
@@ -26,7 +26,7 @@ data class OrderCreatedEvent(
 class OrderAddItemEvent(
     val orderId: UUID,
     val itemId: UUID,
-    val amount: Number
+    val amount: Int
 ): Event<OrderAggregate>(
     name = ORDER_ADD_ITEM
 )
