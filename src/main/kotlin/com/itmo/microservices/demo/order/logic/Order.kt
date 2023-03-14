@@ -14,7 +14,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
 
     private lateinit var id: UUID
     lateinit var status: OrderStatus
-    lateinit var itemsMap: MutableMap<UUID, Double>
+    lateinit var itemsMap: MutableMap<UUID, Int>
     lateinit var timeCreated: Number
     lateinit var deliveryDuration: Number
     lateinit var paymentHistory: List<PaymentLogRecord>
@@ -25,7 +25,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
 
     fun createNewOrder(id: UUID = UUID.randomUUID(),
                        status: OrderStatus,
-                       itemsMap: Map<UUID, Double>,
+                       itemsMap: Map<UUID, Int>,
                        timeCreated: Number,
                        deliveryDuration: Number,
                        paymentHistory: List<PaymentLogRecord>
@@ -35,7 +35,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
 
     fun addItemIntoOrder(orderId: UUID,
                          itemId: UUID,
-                         amount: Number
+                         amount: Int
     ): OrderAddItemEvent {
         return OrderAddItemEvent(orderId, itemId, amount)
     }
@@ -43,7 +43,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
     @StateTransitionFunc
     fun createNewOrder(event: OrderCreatedEvent) {
         this.id = event.id
-        this.itemsMap = event.itemsMap as MutableMap<UUID, Double>
+        this.itemsMap = event.itemsMap as MutableMap<UUID, Int>
         this.status = event.status
         this.timeCreated = event.timeCreated
         this.deliveryDuration = event.deliveryDuration
@@ -54,9 +54,9 @@ class Order: AggregateState<UUID, OrderAggregate> {
     @StateTransitionFunc
     fun addItemIntoOrder(event: OrderAddItemEvent) {
         if (this.itemsMap[event.itemId] != null) {
-            this.itemsMap[event.itemId] = this.itemsMap[event.itemId]!! + event.amount as Double
+            this.itemsMap[event.itemId] = this.itemsMap[event.itemId]!! + event.amount as Int
         } else {
-            this.itemsMap[event.itemId] = event.amount as Double
+            this.itemsMap[event.itemId] = event.amount as Int
         }
     }
 }
