@@ -6,6 +6,6 @@ data class OrderModel(
     val id: UUID?,
     val timeCreated: Long?,
     val status: OrderStatus?,
-    val itemsMap: Map<UUID, Amount>?,
+    val itemsMap: Map<UUID, Double>?,
     val deliveryDuration: Int?,
 )
