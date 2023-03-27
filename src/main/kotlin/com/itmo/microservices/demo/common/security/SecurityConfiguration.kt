@@ -30,6 +30,7 @@ class SecurityConfiguration(
             .csrf().disable()
             .authorizeRequests()
             .antMatchers(HttpMethod.POST, "/users").permitAll()
+            .mvcMatchers("/items/**").permitAll()
             .mvcMatchers("/usersLogic/**").permitAll()
             .antMatchers(HttpMethod.POST, "/authentication").permitAll()
             .antMatchers(HttpMethod.POST, "/authentication/refresh").hasAuthority("REFRESH")

@@ -1,5 +1,6 @@
 package com.itmo.microservices.demo.catalog.logic
 
+import com.itmo.microservices.demo.catalog.api.CatalogCreatedEvent
 import com.itmo.microservices.demo.catalog.api.ItemAddedToCatalogEvent
 import com.itmo.microservices.demo.catalog.api.ItemRemovedFromCatalogEvent
 import com.itmo.microservices.demo.catalog.api.ProductPriceChangedEvent
@@ -12,6 +13,11 @@ fun CatalogAggregateState.updateProductPrice(productId: UUID, price: Double): Pr
     return ProductPriceChangedEvent(productId, price)
 }
 
+fun CatalogAggregateState.createCatalog(
+    id: String = UUID.randomUUID().toString()
+): CatalogCreatedEvent {
+    return CatalogCreatedEvent(id)
+}
 fun CatalogAggregateState.addItem(
     productId: UUID,
     productName: String,

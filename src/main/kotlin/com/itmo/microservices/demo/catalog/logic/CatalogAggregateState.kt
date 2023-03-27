@@ -1,9 +1,6 @@
 package com.itmo.microservices.demo.catalog.logic
 
-import com.itmo.microservices.demo.catalog.api.CatalogAggregate
-import com.itmo.microservices.demo.catalog.api.ItemAddedToCatalogEvent
-import com.itmo.microservices.demo.catalog.api.ItemRemovedFromCatalogEvent
-import com.itmo.microservices.demo.catalog.api.ProductPriceChangedEvent
+import com.itmo.microservices.demo.catalog.api.*
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import java.util.*
@@ -17,6 +14,12 @@ class CatalogAggregateState : AggregateState<String, CatalogAggregate> {
 
     override fun getId(): String {
         return this.catalogId
+    }
+
+    @StateTransitionFunc
+    fun catalogCreate(event: CatalogCreatedEvent) {
+        this.catalogId = event.catalogId
+        updatedAt = createdAt
     }
 
     @StateTransitionFunc
