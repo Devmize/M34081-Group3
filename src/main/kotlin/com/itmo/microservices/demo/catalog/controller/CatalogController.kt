@@ -30,7 +30,6 @@ class CatalogController(val catalogEsService: EventSourcingService<String, Catal
 
     @PostMapping("/{catalogId}")
     fun addItem(@RequestBody item: AddItemRequest, @PathVariable catalogId: String): ItemAddedToCatalogEvent {
-        // тут нуден не create а update, однако для апдейт как не странно нужен айди. Смотреть проблему выше
         val e: ItemAddedToCatalogEvent = catalogEsService.update(catalogId) {
             it.addItem(item.productId, item.productName, item.price, item.count, item.description)
         }
