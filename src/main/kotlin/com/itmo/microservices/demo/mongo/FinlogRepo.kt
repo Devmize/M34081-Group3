@@ -6,5 +6,4 @@ import java.util.*
 
 interface FinlogRepo : MongoRepository<PaymentViewDomain.Payment, UUID> {
     fun findByPaymentId(id: UUID): PaymentViewDomain.Payment?
-    fun insert(payment: PaymentViewDomain)
 }

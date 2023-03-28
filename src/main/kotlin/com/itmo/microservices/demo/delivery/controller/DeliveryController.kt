@@ -15,7 +15,6 @@ class DeliveryController(val deliveryEsService: EventSourcingService<UUID, Deliv
     @GetMapping("/slots")
     @Operation(security = [SecurityRequirement(name = "bearerAuth")])
     fun createPayment(@RequestParam number: Int) : List<Int> {
-        deliveryEsService.create { it.createDelivery(it.getId(), number.toLong(), "", "") }
         return listOf(1, 2)
     }
 }
