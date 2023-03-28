@@ -16,6 +16,7 @@ enum class PaymentStatus{
 class PaymentAttemptEvent(
     val paymentId: UUID,
     val orderId: UUID,
+    val userName: String,
     val sum: Int,
     val status: PaymentStatus,
 ) : Event<PaymentAggregate>(
@@ -27,6 +28,7 @@ class PaymentAttemptEvent(
 class PaymentCompletedSuccessfullyEvent(
     val paymentId: UUID,
     val orderId: UUID,
+    val userName: String,
     val sum: Int,
     val status: PaymentStatus,
 ) : Event<PaymentAggregate>(
@@ -38,6 +40,7 @@ class PaymentCompletedSuccessfullyEvent(
 class PaymentFailedEvent(
     val paymentId: UUID,
     val orderId: UUID,
+    val userName: String,
     val sum: Int,
     val status: PaymentStatus,
 ) : Event<PaymentAggregate>(

@@ -1,6 +1,8 @@
 package com.itmo.microservices.demo.payment.logic
 
 import com.itmo.microservices.demo.payment.api.*
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.core.userdetails.UserDetails
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import ru.quipy.domain.Event
@@ -20,18 +22,32 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
     }
 
     fun tryToPay(orderId: UUID, sum: Int): PaymentAttemptEvent {
+        val principal = SecurityContextHolder.getContext().authentication.principal
+        val username: String = if (principal is UserDetails) {
+            principal.username
+        } else {
+            principal.toString()
+        }
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,
+            userName = username,
             sum = sum,
             status = PaymentStatus.Pending
         )
     }
 
-      fun updateStatus(orderId: UUID, sum: Int, status: PaymentStatus): Event<PaymentAggregate> {
+    fun updateStatus(orderId: UUID, sum: Int, status: PaymentStatus): Event<PaymentAggregate> {
+        val principal = SecurityContextHolder.getContext().authentication.principal
+        val username: String = if (principal is UserDetails) {
+            principal.username
+        } else {
+            principal.toString()
+        }
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,
+            userName = username,
             sum = sum,
             status = status
         )

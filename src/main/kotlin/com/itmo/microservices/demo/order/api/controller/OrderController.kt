@@ -10,10 +10,14 @@ import com.itmo.microservices.demo.order.logic.Order
 import com.itmo.microservices.demo.payment.api.PaymentAggregate
 import com.itmo.microservices.demo.payment.dto.PaymentSubmissionDto
 import com.itmo.microservices.demo.payment.logic.PaymentAggregateState
+import com.itmo.microservices.demo.user.api.UserAggregate
+import com.itmo.microservices.demo.user.logic.UserAggregateState
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.media.Content
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.security.SecurityRequirement
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.web.bind.annotation.*
 import ru.quipy.core.EventSourcingService
 import java.util.*
@@ -22,7 +26,8 @@ import java.util.*
 @RequestMapping("/orders")
 class OrderController(private val orderEsService: EventSourcingService<UUID, OrderAggregate, Order>,
                       val paymentEsService: EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState>,
-                      val deliveryEsService: EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState>, ) {
+                      val deliveryEsService: EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState>,
+                      val userEsService: EventSourcingService<UUID, UserAggregate, UserAggregateState>) {
 
     @PostMapping("/create")
     @Operation(
@@ -96,8 +101,17 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
 
     @PostMapping("/{order_id}/delivery")
     @Operation(security = [SecurityRequirement(name = "bearerAuth")])
-    fun setTimeOfDelivery(@RequestParam slot: Int, @PathVariable order_id: UUID) : BookingDto {
-        deliveryEsService.create { it.createDelivery(order_id, slot.toLong(), "", "") }
-        return BookingDto(UUID.randomUUID(), setOf(UUID.randomUUID()))
+    fun setTimeOfDelivery(@RequestParam slot_in_sec: Int, @PathVariable order_id: UUID) : BookingDto {
+        val principal = SecurityContextHolder.getContext().authentication.principal
+        val username: String
+        if (principal is UserDetails) {
+            username = principal.username
+        } else {
+            username = principal.toString()
+        }
+        val user = userEsService.getState(UUID.randomUUID())
+        deliveryEsService.create { it.createDelivery(order_id, slot_in_sec.toLong(), "user.address",
+            "user.phone") }
+        return BookingDto(UUID.randomUUID(), setOf())
     }
 }
