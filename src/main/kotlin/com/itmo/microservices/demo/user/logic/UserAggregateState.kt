@@ -8,29 +8,28 @@ import java.math.BigDecimal
 import java.util.UUID
 
 class UserAggregateState: AggregateState<UUID, UserAggregate> {
-    private lateinit var userId: UUID
-    private var userName: String = ""
-    private var surname: String? = ""
-    private var address: String? = ""
-    private var phoneNumber: BigDecimal? = BigDecimal.ZERO
+    private lateinit var id: UUID
+    private lateinit var userName: String
+    lateinit var surname: String
+    lateinit var address: String
+    lateinit var phoneNumber: BigDecimal
 
     override fun getId(): UUID {
-        return this.userId
+        return this.id
     }
 
     fun getUserName(): String {
         return this.userName
     }
 
-    fun createNewUser(id: UUID = UUID.randomUUID(), userName: String): UserCreatedEvent {
+    fun createNewUser(id: UUID, userName: String): UserCreatedEvent {
 
         return UserCreatedEvent(id, userName);
     }
 
     @StateTransitionFunc
     fun createNewUser(event: UserCreatedEvent) {
-        println(111111111)
-        this.userId = event.userId
+        this.id = event.id
         this.userName = event.userName;
     }
 }
