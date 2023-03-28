@@ -8,7 +8,9 @@ import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.dto.AddItemDto
 import com.itmo.microservices.demo.order.api.dto.OrderDto
+import com.itmo.microservices.demo.order.api.dto.PaymentLogRecord
 import com.itmo.microservices.demo.order.api.dto.ResponseAnswer
+import com.itmo.microservices.demo.order.api.model.OrderStatus
 import com.itmo.microservices.demo.order.logic.Order
 import com.itmo.microservices.demo.payment.api.PaymentAggregate
 import com.itmo.microservices.demo.payment.dto.PaymentSubmissionDto
@@ -33,8 +35,14 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         security = [SecurityRequirement(name = "bearerAuth")]
     )
     fun createOrder(): OrderDto {
+        val id: UUID = UUID.randomUUID()
+        val status: OrderStatus = OrderStatus.COLLECTING
+        val itemsMap: MutableMap<UUID, Int> = mutableMapOf<UUID, Int>()
+        val timeCreated: Number = System.currentTimeMillis()
+        val deliveryDuration: Number = 0
+        val paymentHistory: List<PaymentLogRecord> = listOf<PaymentLogRecord>()
         val event = orderEsService.create {
-            it.createNewOrder()
+            it.createNewOrder(id, status, itemsMap, timeCreated, deliveryDuration, paymentHistory)
         }
 
         return OrderDto(event.orderId, event.status, event.itemsMap, event.timeCreated, event.deliveryDuration, event.paymentHistory)
@@ -50,7 +58,7 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         security = [SecurityRequirement(name = "bearerAuth")]
     )
     fun addItemIntoOrder(@PathVariable orderId: UUID,
-                         @PathVariable catalogId: String,
+                         @RequestParam catalogId: String,
                          @PathVariable itemId: UUID,
                          @RequestParam amount: Int
     ): ResponseAnswer {
