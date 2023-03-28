@@ -1,4 +1,5 @@
 package com.itmo.microservices.demo.order.api.dto
 
-class ResponseAnswer {
-}
+data class ResponseAnswer(
+    val answer: String
+)
