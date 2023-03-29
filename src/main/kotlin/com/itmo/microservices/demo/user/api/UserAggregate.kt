@@ -4,5 +4,4 @@ import ru.quipy.core.annotations.AggregateType
 import ru.quipy.domain.Aggregate
 
 @AggregateType(aggregateEventsTableName = "userLogic")
-class UserAggregate: Aggregate {
-}
+class UserAggregate: Aggregate

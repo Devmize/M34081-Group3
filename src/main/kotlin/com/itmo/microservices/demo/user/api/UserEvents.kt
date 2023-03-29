@@ -7,11 +7,9 @@ import java.util.*
 const val USER_CREATED_EVENT = "USER_CREATED_EVENT"
 
 @DomainEvent(name = USER_CREATED_EVENT)
-class UserCreatedEvent(
+data class UserCreatedEvent(
     val userId: UUID,
     val userName: String,
-    createdAt: Long = System.currentTimeMillis(),
 ) : Event<UserAggregate>(
     name = USER_CREATED_EVENT,
-    createdAt = createdAt
 )

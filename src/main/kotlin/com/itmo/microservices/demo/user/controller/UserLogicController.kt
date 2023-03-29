@@ -4,7 +4,6 @@ import com.itmo.microservices.demo.user.api.UserAggregate
 import com.itmo.microservices.demo.user.api.UserCreatedEvent
 import com.itmo.microservices.demo.user.logic.UserAggregateState
 import com.itmo.microservices.demo.user.model.UserDto
-import com.itmo.microservices.demo.user.model.UserLogicCreateRequest
 import org.springframework.web.bind.annotation.*
 import ru.quipy.core.EventSourcingService
 import java.util.*
@@ -26,13 +25,11 @@ class UserLogicController(
     }
 
     @PostMapping
-    fun createUser(@RequestBody body: UserLogicCreateRequest): UserCreatedEvent {
-        // при вызове метода create ниже пользователь не сохраняется в базу (монго) ни
-        // монги (как у егора), ни во внутреннюю монгу фреймворка андрея (как при вызову например getState(id))
-        // понять, как он сохраняется и как правильно поднимать монгу чтобы это работало
-        val e: UserCreatedEvent = userEsService.create { it.createNewUser(userName = body.name) }
-        println(e)
-        return e
+    fun createUser(@RequestBody body: UserDto): UserDto {
+        val event: UserCreatedEvent = userEsService.create {
+            it.createNewUser(body.id, body.name)
+        }
+        return UserDto(event.userId, event.userName)
     }
 
 }

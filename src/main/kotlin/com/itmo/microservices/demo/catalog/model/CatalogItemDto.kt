@@ -7,6 +7,6 @@ data class CatalogItemDto(
     val id: UUID,
     val title: String,
     val description: String,
-    val price: Double = 100.0,
+    val price: Double,
     val amount: Int
 )
