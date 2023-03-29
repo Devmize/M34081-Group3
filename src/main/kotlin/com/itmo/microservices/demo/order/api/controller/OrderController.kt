@@ -1,19 +1,26 @@
 package com.itmo.microservices.demo.order.api.controller
 
+import com.itmo.microservices.demo.catalog.api.CatalogAggregate
+import com.itmo.microservices.demo.catalog.logic.CatalogAggregateState
 import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
 import com.itmo.microservices.demo.delivery.dto.BookingDto
 import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.dto.AddItemDto
 import com.itmo.microservices.demo.order.api.dto.OrderDto
+import com.itmo.microservices.demo.order.api.dto.ResponseAnswer
 import com.itmo.microservices.demo.order.logic.Order
 import com.itmo.microservices.demo.payment.api.PaymentAggregate
 import com.itmo.microservices.demo.payment.dto.PaymentSubmissionDto
 import com.itmo.microservices.demo.payment.logic.PaymentAggregateState
+import com.itmo.microservices.demo.user.api.UserAggregate
+import com.itmo.microservices.demo.user.logic.UserAggregateState
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.media.Content
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.security.SecurityRequirement
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.web.bind.annotation.*
 import ru.quipy.core.EventSourcingService
 import java.util.*
@@ -21,19 +28,22 @@ import java.util.*
 @RestController
 @RequestMapping("/orders")
 class OrderController(private val orderEsService: EventSourcingService<UUID, OrderAggregate, Order>,
-                      val paymentEsService: EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState>,
-                      val deliveryEsService: EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState>, ) {
+                      private val paymentEsService: EventSourcingService<UUID, PaymentAggregate, PaymentAggregateState>,
+                      private val deliveryEsService: EventSourcingService<UUID, DeliveryAggregate, DeliveryAggregateState>,
+                      private val catalogEsService: EventSourcingService<String, CatalogAggregate, CatalogAggregateState>,
+                      private val userEsService: EventSourcingService<UUID, UserAggregate, UserAggregateState>
+) {
 
     @PostMapping("/create")
     @Operation(
         security = [SecurityRequirement(name = "bearerAuth")]
     )
-    fun createOrder(@RequestBody request: OrderDto): OrderDto {
+    fun createOrder(): OrderDto {
         val event = orderEsService.create {
-            it.createNewOrder(request.id, request.status, request.itemsMap, request.timeCreated, request.deliveryDuration, request.paymentHistory)
+            it.createNewOrder()
         }
 
-        return OrderDto(event.id, event.createdAt, event.status, event.itemsMap, event.deliveryDuration, event.paymentHistory)
+        return OrderDto(event.orderId, event.status, event.itemsMap, event.timeCreated, event.deliveryDuration, event.paymentHistory)
     }
 
     @PostMapping("/{orderId}/items/{itemId}")
@@ -46,27 +56,29 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         security = [SecurityRequirement(name = "bearerAuth")]
     )
     fun addItemIntoOrder(@PathVariable orderId: UUID,
+                         @PathVariable catalogId: String,
                          @PathVariable itemId: UUID,
                          @RequestParam amount: Int
-    ) {
-        orderEsService.update(orderId) {
-            it.addItemIntoOrder(orderId, itemId, amount)
+    ): ResponseAnswer {
+        val catalog = catalogEsService.getState(catalogId)
+        if (catalog != null) {
+            val product = catalog.products[itemId]
+            if (product != null) {
+                if (product.count!! >= amount) {
+                    orderEsService.update(orderId) {
+                        it.addItemIntoOrder(orderId, itemId, amount)
+                    }
+                } else {
+                    return ResponseAnswer("Catalog doesn't have " + "product with" + amount + "count")
+                }
+            } else {
+                return ResponseAnswer("Catalog doesn't have product")
+            }
+        } else {
+            return ResponseAnswer("Catalog doesn't exist")
         }
-    }
 
-    @PostMapping("/{orderId}")
-    @Operation(
-        summary = "Add item into order",
-        responses = [
-            ApiResponse(description = "Item added into order", responseCode = "200"),
-            ApiResponse(description = "Can't add item into order", responseCode = "404", content = [Content()])
-        ],
-        security = [SecurityRequirement(name = "bearerAuth")]
-    )
-    fun addItemIntoOrder(@RequestBody request: AddItemDto) {
-        orderEsService.update(request.orderId) {
-            it.addItemIntoOrder(request.orderId, request.itemId, request.amount)
-        }
+        return ResponseAnswer("All fine, be happy, bro!")
     }
 
     @GetMapping("/{orderId}")
@@ -76,7 +88,7 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
     fun getOrder(@PathVariable orderId: UUID): OrderDto? {
         val order = orderEsService.getState(orderId)
         if (order != null) {
-            return OrderDto(order.getId(), order.timeCreated, order.status, order.itemsMap, order.deliveryDuration, order.paymentHistory)
+            return OrderDto(order.getId(), order.status, order.itemsMap, order.timeCreated, order.deliveryDuration, order.paymentHistory)
         }
 
         return null
@@ -96,8 +108,17 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
 
     @PostMapping("/{order_id}/delivery")
     @Operation(security = [SecurityRequirement(name = "bearerAuth")])
-    fun setTimeOfDelivery(@RequestParam slot: Int, @PathVariable order_id: UUID) : BookingDto {
-        deliveryEsService.create { it.createDelivery(order_id, slot.toLong(), "", "") }
-        return BookingDto(UUID.randomUUID(), setOf(UUID.randomUUID()))
+    fun setTimeOfDelivery(@RequestParam slot_in_sec: Int, @PathVariable order_id: UUID) : BookingDto {
+        val principal = SecurityContextHolder.getContext().authentication.principal
+        val username: String
+        if (principal is UserDetails) {
+            username = principal.username
+        } else {
+            username = principal.toString()
+        }
+        val user = userEsService.getState(UUID.randomUUID())
+        deliveryEsService.create { it.createDelivery(order_id, slot_in_sec.toLong(), "user.address",
+            "user.phone") }
+        return BookingDto(UUID.randomUUID(), setOf())
     }
 }

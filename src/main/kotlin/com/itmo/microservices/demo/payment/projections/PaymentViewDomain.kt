@@ -9,6 +9,7 @@ import java.util.*
 class PaymentViewDomain {
     @Document("payment-view")
     data class Payment(
+        val userName: String,
         val paymentId: UUID,
         val amount: Int,
         val orderId: UUID,

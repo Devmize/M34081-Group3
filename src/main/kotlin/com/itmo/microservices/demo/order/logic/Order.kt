@@ -1,5 +1,6 @@
 package com.itmo.microservices.demo.order.logic
 
+import com.itmo.microservices.demo.catalog.logic.Order
 import com.itmo.microservices.demo.order.api.OrderAddItemEvent
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.OrderCreatedEvent
@@ -24,11 +25,11 @@ class Order: AggregateState<UUID, OrderAggregate> {
     }
 
     fun createNewOrder(id: UUID = UUID.randomUUID(),
-                       status: OrderStatus,
-                       itemsMap: Map<UUID, Int>,
-                       timeCreated: Number,
-                       deliveryDuration: Number,
-                       paymentHistory: List<PaymentLogRecord>
+                       status: OrderStatus = OrderStatus.COLLECTING,
+                       itemsMap: MutableMap<UUID, Int> = mutableMapOf<UUID, Int>(),
+                       timeCreated: Number = System.currentTimeMillis(),
+                       deliveryDuration: Number = 0,
+                       paymentHistory: List<PaymentLogRecord> = listOf<PaymentLogRecord>()
     ): OrderCreatedEvent {
         return OrderCreatedEvent(id, status, itemsMap, timeCreated, deliveryDuration, paymentHistory)
     }
@@ -45,6 +46,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
         this.id = event.orderId
         this.itemsMap = event.itemsMap as MutableMap<UUID, Int>
         this.status = event.status
+        this.itemsMap = event.itemsMap as MutableMap<UUID, Int>
         this.timeCreated = event.timeCreated
         this.deliveryDuration = event.deliveryDuration
         this.paymentHistory = event.paymentHistory
