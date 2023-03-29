@@ -42,7 +42,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
 
     @StateTransitionFunc
     fun createNewOrder(event: OrderCreatedEvent) {
-        this.id = event.id
+        this.id = event.orderId
         this.itemsMap = event.itemsMap as MutableMap<UUID, Int>
         this.status = event.status
         this.timeCreated = event.timeCreated
