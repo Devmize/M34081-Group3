@@ -2,11 +2,13 @@ package com.itmo.microservices.demo.order.logic
 
 import com.itmo.microservices.demo.catalog.logic.Order
 import com.itmo.microservices.demo.order.api.OrderAddItemEvent
+import com.itmo.microservices.demo.order.api.OrderAddPaymentEvent
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.OrderCreatedEvent
 import com.itmo.microservices.demo.order.api.dto.PaymentLogRecord
 import com.itmo.microservices.demo.order.api.model.OrderStatus
 import com.itmo.microservices.demo.order.api.model.PaymentLogRecordModel
+import com.itmo.microservices.demo.payment.api.PaymentStatus
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import java.util.*
@@ -18,7 +20,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
     lateinit var itemsMap: MutableMap<UUID, Int>
     lateinit var timeCreated: Number
     lateinit var deliveryDuration: Number
-    lateinit var paymentHistory: List<PaymentLogRecord>
+    lateinit var paymentHistory: MutableList<PaymentLogRecord>
 
     override fun getId(): UUID {
         return this.id
@@ -29,7 +31,7 @@ class Order: AggregateState<UUID, OrderAggregate> {
                        itemsMap: MutableMap<UUID, Int> = mutableMapOf<UUID, Int>(),
                        timeCreated: Number = System.currentTimeMillis(),
                        deliveryDuration: Number = 0,
-                       paymentHistory: List<PaymentLogRecord> = listOf<PaymentLogRecord>()
+                       paymentHistory: MutableList<PaymentLogRecord> = mutableListOf<PaymentLogRecord>()
     ): OrderCreatedEvent {
         return OrderCreatedEvent(id, status, itemsMap, timeCreated, deliveryDuration, paymentHistory)
     }
@@ -39,6 +41,14 @@ class Order: AggregateState<UUID, OrderAggregate> {
                          amount: Int
     ): OrderAddItemEvent {
         return OrderAddItemEvent(orderId, itemId, amount)
+    }
+
+    fun addPaymentIntoOrder(orderId: UUID,
+                            status: PaymentStatus,
+                            sum: Int,
+                            transactionId: UUID
+    ): OrderAddPaymentEvent {
+        return OrderAddPaymentEvent(orderId, status, sum, transactionId)
     }
 
     @StateTransitionFunc
@@ -60,5 +70,11 @@ class Order: AggregateState<UUID, OrderAggregate> {
         } else {
             this.itemsMap[event.itemId] = event.amount as Int
         }
+    }
+
+    @StateTransitionFunc
+    fun addPaymentIntoOrder(event: OrderAddPaymentEvent) {
+        this.paymentHistory
+            .add(PaymentLogRecord(System.currentTimeMillis(), event.status, event.sum.toDouble(), event.transactionId))
     }
 }

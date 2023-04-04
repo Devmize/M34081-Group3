@@ -29,7 +29,7 @@ class UserAggregateState: AggregateState<UUID, UserAggregate> {
 
     @StateTransitionFunc
     fun createNewUser(event: UserCreatedEvent) {
-        this.userId = event.userId
+        this.id = event.userId
         this.userName = event.userName;
     }
 }

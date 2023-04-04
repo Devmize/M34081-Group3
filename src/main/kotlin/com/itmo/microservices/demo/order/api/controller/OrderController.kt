@@ -8,9 +8,11 @@ import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
 import com.itmo.microservices.demo.order.api.OrderAggregate
 import com.itmo.microservices.demo.order.api.dto.AddItemDto
 import com.itmo.microservices.demo.order.api.dto.OrderDto
+import com.itmo.microservices.demo.order.api.dto.PaymentLogRecord
 import com.itmo.microservices.demo.order.api.dto.ResponseAnswer
 import com.itmo.microservices.demo.order.logic.Order
 import com.itmo.microservices.demo.payment.api.PaymentAggregate
+import com.itmo.microservices.demo.payment.api.PaymentStatus
 import com.itmo.microservices.demo.payment.dto.PaymentSubmissionDto
 import com.itmo.microservices.demo.payment.logic.PaymentAggregateState
 import com.itmo.microservices.demo.user.api.UserAggregate
@@ -56,7 +58,7 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         security = [SecurityRequirement(name = "bearerAuth")]
     )
     fun addItemIntoOrder(@PathVariable orderId: UUID,
-                         @PathVariable catalogId: String,
+                         @RequestParam catalogId: String,
                          @PathVariable itemId: UUID,
                          @RequestParam amount: Int
     ): ResponseAnswer {
@@ -102,8 +104,12 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         for (item in order.itemsMap) {
             sum += item.value
         }
-        paymentEsService.create { it.tryToPay(order_id, sum) }
-        return PaymentSubmissionDto(System.currentTimeMillis(), UUID.randomUUID())
+        val event = paymentEsService.create { it.createNewPayment(order_id, sum) }
+        val transactionId = UUID.randomUUID()
+        orderEsService.update(order_id) {
+            it.addPaymentIntoOrder(order_id, event.status, event.sum, transactionId)
+        }
+        return PaymentSubmissionDto(System.currentTimeMillis(), transactionId)
     }
 
     @PostMapping("/{order_id}/delivery")
@@ -113,6 +119,7 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         val username: String
         if (principal is UserDetails) {
             username = principal.username
+            principal.username
         } else {
             username = principal.toString()
         }

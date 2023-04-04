@@ -5,5 +5,5 @@ import org.springframework.data.mongodb.repository.MongoRepository
 import java.util.*
 
 interface FinlogRepo : MongoRepository<PaymentViewDomain.Payment, UUID> {
-    fun findByPaymentId(id: UUID): PaymentViewDomain.Payment?
+    fun findByOrderId(id: UUID): PaymentViewDomain.Payment?
 }

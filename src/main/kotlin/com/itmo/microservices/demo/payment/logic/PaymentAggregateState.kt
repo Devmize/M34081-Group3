@@ -21,13 +21,14 @@ class PaymentAggregateState : AggregateState<UUID, PaymentAggregate> {
         return paymentId
     }
 
-    fun tryToPay(orderId: UUID, sum: Int): PaymentAttemptEvent {
+    fun createNewPayment(orderId: UUID, sum: Int): PaymentAttemptEvent {
         val principal = SecurityContextHolder.getContext().authentication.principal
         val username: String = if (principal is UserDetails) {
             principal.username
         } else {
             principal.toString()
         }
+        paymentId = UUID.randomUUID()
         return PaymentAttemptEvent(
             paymentId = paymentId,
             orderId = orderId,

@@ -26,4 +26,9 @@ class AnnotationBasedOrderEventsSubscriber {
     fun taskAddItemSubscriber(event: OrderAddItemEvent) {
         logger.info("item added into order successfully: orderId {}, itemId {}, amount {}", event.orderId, event.itemId, event.amount)
     }
+
+    @SubscribeEvent
+    fun taskAddPaymentSubscriber(event: OrderAddItemEvent) {
+        logger.info("payment added into order successfully")
+    }
 }
