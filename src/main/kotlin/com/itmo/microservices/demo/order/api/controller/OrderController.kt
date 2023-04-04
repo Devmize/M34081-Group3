@@ -6,7 +6,8 @@ import com.itmo.microservices.demo.delivery.api.DeliveryAggregate
 import com.itmo.microservices.demo.delivery.dto.BookingDto
 import com.itmo.microservices.demo.delivery.logic.DeliveryAggregateState
 import com.itmo.microservices.demo.order.api.OrderAggregate
-import com.itmo.microservices.demo.order.api.dto.AddItemDto
+import com.itmo.microservices.demo.order.api.OrderBookedEvent
+import com.itmo.microservices.demo.order.api.dto.BookedDto
 import com.itmo.microservices.demo.order.api.dto.OrderDto
 import com.itmo.microservices.demo.order.api.dto.ResponseAnswer
 import com.itmo.microservices.demo.order.logic.Order
@@ -56,7 +57,7 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         security = [SecurityRequirement(name = "bearerAuth")]
     )
     fun addItemIntoOrder(@PathVariable orderId: UUID,
-                         @PathVariable catalogId: String,
+                         @RequestParam catalogId: String,
                          @PathVariable itemId: UUID,
                          @RequestParam amount: Int
     ): ResponseAnswer {
@@ -92,6 +93,37 @@ class OrderController(private val orderEsService: EventSourcingService<UUID, Ord
         }
 
         return null
+    }
+
+    @PostMapping("/{orderId}/bookings")
+    @Operation(
+        security = [SecurityRequirement(name = "bearerAuth")]
+    )
+    fun bookedOrder(@PathVariable orderId: UUID,
+                    @RequestParam catalogId: String
+    ): BookedDto? {
+//        val catalog = catalogEsService.getState(catalogId)
+//        if (catalog != null) {
+//            val order = orderEsService.getState(orderId)
+//            if (order != null) {
+//                for (item in order.itemsMap) {
+//                    val product = catalog.products[item.key]
+//                    if (product != null) {
+//                        if (item.value >= product.count!!) {
+//                            order.itemsMap.remove(item.key)
+//                        }
+//                    } else {
+//                        order.itemsMap.remove(item.key)
+//                    }
+//                }
+//            }
+//        }
+
+        val event = orderEsService.update(orderId) {
+            it.bookedOrder()
+        }
+
+        return BookedDto(event.orderId)
     }
 
     @PostMapping("/{order_id}/payment")

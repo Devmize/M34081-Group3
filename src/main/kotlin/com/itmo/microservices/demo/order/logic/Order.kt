@@ -1,12 +1,8 @@
 package com.itmo.microservices.demo.order.logic
 
-import com.itmo.microservices.demo.catalog.logic.Order
-import com.itmo.microservices.demo.order.api.OrderAddItemEvent
-import com.itmo.microservices.demo.order.api.OrderAggregate
-import com.itmo.microservices.demo.order.api.OrderCreatedEvent
+import com.itmo.microservices.demo.order.api.*
 import com.itmo.microservices.demo.order.api.dto.PaymentLogRecord
 import com.itmo.microservices.demo.order.api.model.OrderStatus
-import com.itmo.microservices.demo.order.api.model.PaymentLogRecordModel
 import ru.quipy.core.annotations.StateTransitionFunc
 import ru.quipy.domain.AggregateState
 import java.util.*
@@ -41,6 +37,14 @@ class Order: AggregateState<UUID, OrderAggregate> {
         return OrderAddItemEvent(orderId, itemId, amount)
     }
 
+    fun updateItems(items: MutableMap<UUID, Int>): OrderUpdateItemsEvent {
+        return OrderUpdateItemsEvent(items)
+    }
+
+    fun bookedOrder(): OrderBookedEvent {
+        return OrderBookedEvent(this.id)
+    }
+
     @StateTransitionFunc
     fun createNewOrder(event: OrderCreatedEvent) {
         this.id = event.orderId
@@ -52,7 +56,6 @@ class Order: AggregateState<UUID, OrderAggregate> {
         this.paymentHistory = event.paymentHistory
     }
 
-    // Will add check for item
     @StateTransitionFunc
     fun addItemIntoOrder(event: OrderAddItemEvent) {
         if (this.itemsMap[event.itemId] != null) {
@@ -60,5 +63,15 @@ class Order: AggregateState<UUID, OrderAggregate> {
         } else {
             this.itemsMap[event.itemId] = event.amount as Int
         }
+    }
+
+    @StateTransitionFunc
+    fun updateOrderItems(event: OrderUpdateItemsEvent) {
+        this.itemsMap = event.items
+    }
+
+    @StateTransitionFunc
+    fun bookedOrder(event: OrderBookedEvent) {
+        this.status = OrderStatus.BOOKED
     }
 }

@@ -9,6 +9,8 @@ import java.util.*
 
 const val ORDER_CREATED = "ORDER_CREATED_EVENT"
 const val ORDER_ADD_ITEM = "ORDER_ADD_ITEM_EVENT"
+const val ORDER_BOOKED = "ORDER_BOOKED"
+const val ORDER_UPDATE = "ORDER_UPDATE"
 
 @DomainEvent(name = ORDER_CREATED)
 data class OrderCreatedEvent(
@@ -23,10 +25,24 @@ data class OrderCreatedEvent(
 )
 
 @DomainEvent(name = ORDER_ADD_ITEM)
-class OrderAddItemEvent(
+data class OrderAddItemEvent(
     val orderId: UUID,
     val itemId: UUID,
     val amount: Int
 ): Event<OrderAggregate>(
     name = ORDER_ADD_ITEM
+)
+
+@DomainEvent(name = ORDER_UPDATE)
+data class OrderUpdateItemsEvent(
+    val items: MutableMap<UUID, Int>
+): Event<OrderAggregate>(
+    name = ORDER_UPDATE
+)
+
+@DomainEvent(name = ORDER_BOOKED)
+data class OrderBookedEvent(
+    val orderId: UUID
+): Event<OrderAggregate>(
+    name = ORDER_BOOKED
 )

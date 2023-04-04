@@ -2,6 +2,7 @@ package com.itmo.microservices.demo.order.projection
 
 import com.itmo.microservices.demo.order.api.OrderAddItemEvent
 import com.itmo.microservices.demo.order.api.OrderAggregate
+import com.itmo.microservices.demo.order.api.OrderBookedEvent
 import com.itmo.microservices.demo.order.api.OrderCreatedEvent
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -25,5 +26,10 @@ class AnnotationBasedOrderEventsSubscriber {
     @SubscribeEvent
     fun taskAddItemSubscriber(event: OrderAddItemEvent) {
         logger.info("item added into order successfully: orderId {}, itemId {}, amount {}", event.orderId, event.itemId, event.amount)
+    }
+
+    @SubscribeEvent
+    fun taskBookedOrderSubscriber(event: OrderBookedEvent) {
+        logger.info("order booked successfully: orderId {}", event.orderId)
     }
 }
